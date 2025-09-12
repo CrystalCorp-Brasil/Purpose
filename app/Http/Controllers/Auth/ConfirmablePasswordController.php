@@ -10,7 +10,7 @@
 
     class ConfirmablePasswordController extends Controller {
         public function show(): View {
-            return view('auth.confirm-password');
+            return view('auth.confirmPassword');
         }
 
         public function store(Request $request): RedirectResponse {

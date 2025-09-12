@@ -8,13 +8,14 @@
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Hash;
     use Illuminate\Support\Facades\Password;
+    use Illuminate\Support\Facades\Redirect;
     use Illuminate\Support\Str;
     use Illuminate\Validation\Rules;
     use Illuminate\View\View;
 
     class NewPasswordController extends Controller {
         public function create(Request $request): View {
-            return view('auth.reset-password', ['request' => $request]);
+            return view('auth.resetPassword', ['request' => $request]);
         }
 
         public function store(Request $request): RedirectResponse {
@@ -25,6 +26,6 @@
                     event(new PasswordReset($user));
                 }
             );
-            return $status == Password::PASSWORD_RESET ? redirect()->route('login')->with('status', __($status)) : back()->withInput($request->only('email'))->withErrors(['email' => __($status)]);
+            return $status == Password::PASSWORD_RESET ? Redirect::route('login')->with('success', 'Alteração efetuada com sucesso!') : back()->withInput($request->only('email'))->withErrors(['email' => __($status)]);
         }
     }

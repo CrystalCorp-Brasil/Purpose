@@ -67,12 +67,12 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <div class="user col align-self-end">
+                            <div class="user col align-self-end bg-white rounded-pill">
                                 <img src="@if(Auth::user()->image == null){{ asset('images/adm/user.png') }}@else{{ asset(Auth::user()->image) }}@endif" alt="{{ Auth::user()->name }}" id="userDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                                     <div class="dropdown-header"><i class="i-Lock-User me-1"></i> {{ Auth::user()->name }}</div>
+                                    <a href="{{ route('home') }}" class="dropdown-item"><i class="far fa-home-lg-alt"></i><span class="ms-2"> Home</span></a>
 @if (Auth::user()->rule == 'admin')
-                                    <a class="dropdown-item">Account settings</a>
                                     <a class="dropdown-item">Billing history</a>
 @endif
                                     <form method="POST" action="{{ route('logout') }}">

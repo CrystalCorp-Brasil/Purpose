@@ -16,6 +16,9 @@
         public function store(LoginRequest $request): RedirectResponse {
             $request->authenticate();
             $request->session()->regenerate();
+            if(Auth::user()->rule == 'user') {
+                return redirect()->intended(route('home', absolute: false));
+            } else
             return redirect()->intended(route('dashboard', absolute: false));
         }
 

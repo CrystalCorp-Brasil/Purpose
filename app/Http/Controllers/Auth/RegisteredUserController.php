@@ -19,20 +19,21 @@
         public function store(Request $request): RedirectResponse {
             $request->validate([
                 'name' => ['required','string','max:255'],
-                'username' => ['nullable','string','max:255','unique:'.User::class],
-                'image' => ['nullable','image','max:2048'],
+                'username' => ['required','string','max:255','unique:'.User::class],
                 'email' => ['required','string','lowercase','email','max:255','unique:'.User::class],
+                'image' => ['nullable','image','max:2048'],
                 'password' => ['required','confirmed',Rules\Password::defaults()],
             ]);
             if($request->hasFile('image')) {
                 $file = $request->file('image');
-                $fileImg = uniqid().'.'.$file->getClientOriginalExtension();
+                $fileImg = 'uploads/users/'.uniqid().'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('uploads/users'), $fileImg);
             }
-            else $fileImg = 'images/user.png';
+            else $fileImg = null;
             $user = User::create([
                 'name' => $request->name,
-                'image' => 'uploads/users/'.$fileImg,
+                'username' => $request->username,
+                'image' => $fileImg,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);

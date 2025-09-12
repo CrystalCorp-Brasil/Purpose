@@ -37,17 +37,17 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 d-grid"><button class="btn btn-login mt-4" type="submit" name="submit"><i class="far fa-user"></i>&nbsp;&nbsp;Logar</button></div></br>
-                                        <div class="row">
-                                            <div class="col-sm-6 text-center">
-                                                <h6>Não tem uma conta?</h6>
-                                                <a href="{{ route('register') }}" class="btn btn-outline-info btn-rounded mt-2"><i class="fa fa-edit"></i>&nbsp;&nbsp;<b>Registrar-se</b></a>
-                                            </div>
-                                            <div class="col-sm-6 text-center">
-                                                <h6>Esqueceu sua senha?</h6>
-                                                <a href="{{ route('password.request') }}" class="btn btn-outline-warning btn-rounded mt-2"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<b>Enviar e-mail</b></a>
-                                            </div>
-                                        </div>
                                     </form>
+                                    <div class="row">
+                                        <div class="col-sm-6 text-center">
+                                            <h6>Não tem uma conta?</h6>
+                                            <a href="{{ route('register') }}" class="btn btn-outline-info btn-rounded mt-2"><i class="fa fa-edit"></i>&nbsp;&nbsp;<b>Registrar-se</b></a>
+                                        </div>
+                                        <div class="col-sm-6 text-center">
+                                            <h6>Esqueceu sua senha?</h6>
+                                            <a href="{{ route('password.request') }}" class="btn btn-outline-warning btn-rounded mt-2"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<b>Enviar e-mail</b></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
