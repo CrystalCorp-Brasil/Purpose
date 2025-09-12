@@ -15,7 +15,14 @@
 /node_modules
 /public/build
 /public/hot
+/public/admin
+/public/images
+/public/site
+/public/uploads
+/public/webfonts
 /public/storage
+/resources/css
+/resources/js
 /storage/*.key
 /storage/pail
 /vendor

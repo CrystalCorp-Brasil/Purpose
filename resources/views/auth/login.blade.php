@@ -1,47 +1,81 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'login'])
+@section('content')
+        <main class="main min-vh-100" id="top">
+            <section class="py-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 px-0">
+                            <div class="sticky-top vh-lg-100">
+                                <div class="bg-holder" style="background-image:url({{ asset('images/adm/login.gif') }});" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.4}'></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row h-100 align-items-center justify-content-center">
+                                <a href="/" class="text-center">
+                                    <img src="{{ asset('images/crystalcorp.png') }}" width="100px" data-toggle="tooltip" data-placement="top" title="Página Inicial" alt="Grupo CrystalCorp"><br>
+                                </a>
+                                <div class="col-sm-8 col-md-6 col-lg-10 col-xl-8" data-zanim-xs='{"delay":0.5,"animation":"slide-right"}' data-zanim-trigger="scroll">
+                                    <h3 class="display-4 fs-7">Bem vindo ao,<br />Grupo CrystalCorp.</h3>
+                                    <h6 class="text-danger mt-3">Faça seu login para continuar.</h6>
+                                    <form class="mt-5" method="POST" action="{{ route('login') }}">
+                                        @csrf
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+                                        <div class="mb-3">
+                                            <div class="form-group row pt-4">
+                                                <label class="col-sm-2 col-form-label text-primary" for="email">Usuário</label>
+                                                <div class="col-sm-10">
+                                                    <input  type="email" id="email" name="email" class="form-control bg-light @error('email') is-invalid @enderror" placeholder="email ou usuário"  value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-0">
+                                            <div class="form-group row pt-4">
+                                                <label class="col-sm-2 col-form-label text-primary" for="email">Senha</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" id="password" name="password" class="form-control bg-light @error('password') is-invalid @enderror" placeholder="Senha" required autocomplete="current-password"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 d-grid"><button class="btn btn-login mt-4" type="submit" name="submit"><i class="far fa-user"></i>&nbsp;&nbsp;Logar</button></div></br>
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <h6>Não tem uma conta?</h6>
+                                                <a href="{{ route('register') }}" class="btn btn-outline-info btn-rounded mt-2"><i class="fa fa-edit"></i>&nbsp;&nbsp;<b>Registrar-se</b></a>
+                                            </div>
+                                            <div class="col-sm-6 text-center">
+                                                <h6>Esqueceu sua senha?</h6>
+                                                <a href="{{ route('password.request') }}" class="btn btn-outline-warning btn-rounded mt-2"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<b>Enviar e-mail</b></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+@endsection
+@section('script')
+@error('email')
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Atenção!',
+                text: '{{ $message }}',
+                showConfirmButton: true,
+            });
+        </script>
+@enderror
+@error('password')
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Atenção!',
+                text: '{{ $message }}',
+                showConfirmButton: true,
+            });
+        </script>
+@enderror
+@endsection
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>

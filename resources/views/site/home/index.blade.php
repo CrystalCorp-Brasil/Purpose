@@ -1,0 +1,11 @@
+@extends('layouts.web',['pageActive'=>'home'])
+@section('content')
+            @include('site.home.sections.mosaic')
+            @include('site.home.sections.register')
+            @include('site.home.sections.message')
+            @include('site.home.sections.columns')
+            @include('site.home.sections.banner_hall')
+            @include('site.home.sections.parallax')
+            @include('site.home.sections.signup_db')
+            @include('site.home.sections.dcuo')
+@endsection

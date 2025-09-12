@@ -9,6 +9,9 @@
         public function rules(): array {
             return [
                 'name' => ['required', 'string', 'max:255'],
+                'username' => ['nullable','string','max:255','unique:'.User::class],
+                'image' => ['nullable','image','max:2048'],
+                'bio' => ['nullable'],
                 'email' => ['required','string','lowercase','email','max:255',Rule::unique(User::class)->ignore($this->user()->id),],
             ];
         }
