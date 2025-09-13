@@ -31,7 +31,7 @@
                     <div style="margin: auto"></div>
                     @include('admin.parts.header-right')
                 </div>
-                <div class="main-content">
+                <div class="main-content mb-3">
                     <div class="breadcrumb">
                         <h1>Perfil de Usuário</h1>
                         <ul>

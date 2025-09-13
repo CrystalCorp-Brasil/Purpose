@@ -48,11 +48,6 @@
                                         <div class="form-group row py-5"><textarea id="editor" name="bio">{!! $user->bio !!}</textarea></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="clearfix m-3"></div>
-                        <div class="card">
-                            <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group row">
@@ -63,7 +58,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="clearfix"></div>
+                    <div class="clearfix my-2"></div>
 @endsection
 @section('script')
     <script src="{{ asset('admin/js/tinymce/tinymce.min.js') }}" referrerpolicy="origin" crossorigin="anonymous"></script>

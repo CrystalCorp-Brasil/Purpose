@@ -47,7 +47,7 @@
                     <div class="submenu-area" data-parent="dashboard">
                         <header>
                             <h6>Dashboard</h6>
-                            <p>Bem vindo, {{ Auth::user()->name }}.</p>
+                            <p>Bem vindo, <span class="text-light">{{ Auth::user()->name }}</span>.</p>
                         </header>
                         <ul class="childNav">
                             <li class="nav-item"><a href="{{ route('image.upload') }}"><i class="nav-icon i-Clock-4"></i><span class="item-name">Adicionar Imagens</span></a></li>
