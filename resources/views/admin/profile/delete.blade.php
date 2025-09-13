@@ -1,6 +1,7 @@
 @extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
 @section('title') | Exclusão @endsection
 @section('content')
+                    <div class="card">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -12,7 +13,8 @@
                                 </div>
                             </div>
                         </div>
-                        @include('admin.profile.parts.modalDeleteUser')
+                    </div>
+                    @include('admin.profile.parts.modalDeleteUser')
 @endsection
 @section('script')
         <script>

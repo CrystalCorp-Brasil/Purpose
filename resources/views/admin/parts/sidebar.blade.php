@@ -5,11 +5,11 @@
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Dashboard</span></a>
                             <div class="triangle"></div>
                         </li>
-@if (Auth::user()->rule == 'admin')
-                        <li class="nav-item" data-item="uikits">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">UI kits</span></a>
+                        <li class="nav-item" data-item="resource">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Ícones</span></a>
                             <div class="triangle"></div>
                         </li>
+@if (Auth::user()->rule == 'admin')
                         <li class="nav-item" data-item="extrakits">
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Suitcase"></i><span class="nav-text">Extra kits</span></a>
                             <div class="triangle"></div>
@@ -98,30 +98,20 @@
                             <li class="nav-item"><a href="upload.html"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Upload</span></a></li>
                         </ul>
                     </div>
-                    <div class="submenu-area" data-parent="uikits">
+@endif
+                    <div class="submenu-area" data-parent="resource">
                         <header>
-                            <h6>UI Kits</h6>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <h6>Ícones</h6>
+                            <p>Bem vindo, {{ Auth::user()->name }}.</p>
                         </header>
                         <ul class="childNav">
-                            <li class="nav-item"><a href="alerts.html"><i class="nav-icon i-Bell1"></i><span class="item-name">Alerts</span></a></li>
-                            <li class="nav-item"><a href="accordion.html"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Accordion</span></a></li>
-                            <li class="nav-item"><a href="badges.html"><i class="nav-icon i-Medal-2"></i><span class="item-name">Badges</span></a></li>
-                            <li class="nav-item"><a href="buttons.html"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Buttons</span></a></li>
-                            <li class="nav-item"><a href="cards.html"><i class="nav-icon i-Line-Chart-2"></i><span class="item-name">Cards</span></a></li>
-                            <li class="nav-item"><a href="card.metrics.html"><i class="nav-icon i-ID-Card"></i><span class="item-name">Card Metrics</span></a></li>
-                            <li class="nav-item"><a href="carousel.html"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Carousels</span></a></li>
-                            <li class="nav-item"><a href="lists.html"><i class="nav-icon i-Belt-3"></i><span class="item-name">Lists</span></a></li>
-                            <li class="nav-item"><a href="pagination.html"><i class="nav-icon i-Arrow-Next"></i><span class="item-name">Paginations</span></a></li>
-                            <li class="nav-item"><a href="popover.html"><i class="nav-icon i-Speach-Bubble-2"></i><span class="item-name">Popover</span></a></li>
-                            <li class="nav-item"><a href="progressbar.html"><i class="nav-icon i-Loading"></i><span class="item-name">Progressbar</span></a></li>
-                            <li class="nav-item"><a href="tables.html"><i class="nav-icon i-File-Horizontal-Text"></i><span class="item-name">Tables</span></a></li>
-                            <li class="nav-item"><a href="tabs.html"><i class="nav-icon i-New-Tab"></i><span class="item-name">Tabs</span></a></li>
-                            <li class="nav-item"><a href="tooltip.html"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">Tooltip</span></a></li>
-                            <li class="nav-item"><a href="modals.html"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Modals</span></a></li>
-                            <li class="nav-item"><a href="nouislider.html"><i class="nav-icon i-Width-Window"></i><span class="item-name">Sliders</span></a></li>
+                            <li class="nav-item"><a href="{{ route('resource.index') }}"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Ícones</span></a></li>
+@if (Auth::user()->rule == 'admin')
+                            <li class="nav-item"><a href="{{ route('resource.create') }}"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Adicionar Ícone</span></a></li>
+@endif
                         </ul>
                     </div>
+@if (Auth::user()->rule == 'admin')
                     <div class="submenu-area" data-parent="sessions">
                         <header>
                             <h6>Session Pages</h6>

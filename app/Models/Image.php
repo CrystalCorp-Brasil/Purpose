@@ -5,6 +5,7 @@
     use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
     class Image extends Model {
+        protected $table = 'images';
         protected $fillable = ['title','descr','image','user_id'];
 
         public function users(): BelongsToMany {

@@ -11,7 +11,7 @@
     use Illuminate\View\View;
 
     class ProfileController extends Controller {
-        public function dashboard(): View {
+        public function dashboard(Request $request): View {
             $user = Auth::user();
             $images = Image::select('*')->where('user_id',$user->id)->get();
             return view('admin/profile/index', \compact('user','images'));

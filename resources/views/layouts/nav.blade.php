@@ -12,11 +12,11 @@
                 </div>
                 <div class="fancynavbar-addon fancynavbar-addon-height" data-zanim-lg='{"from":{"opacity":1,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll">
 @auth
-                    <a class="fancynavbar-addon-item" href="{{ route('dashboard') }}"><span class="fas fa-house-user"></span></a>
+                    <a class="fancynavbar-addon-item" href="{{ route('dashboard') }}"><span class="fal fa-laptop-code"></span></a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
-                        <button class="btn btn-xs btn-corp-b" type="submit"><span class="ms-2"> Encerrar</span></button>
+                        <button class="btn btn-corp-b" type="submit"><span class="fad fa-portal-exit fa-2x"></span></button>
                     </form>
 @else
                     <a class="fancynavbar-addon-item" href="{{ route('login') }}"><span class="fas fa-house-user"></span></a>

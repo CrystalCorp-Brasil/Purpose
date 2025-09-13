@@ -27,6 +27,7 @@
 @if (Auth::user()->rule == 'admin')
                     @include('admin.parts.megamenu')
 @endif
+@yield('searchSection')
                     <div style="margin: auto"></div>
                     @include('admin.parts.header-right')
                 </div>
@@ -39,13 +40,12 @@
                         </ul>
                     </div>
                     <div class="separator-breadcrumb border-top"></div>
-                    <div class="card user-profile o-hidden mb-4">
 @endif
 @yield('content')
 @if ($pageActive != 'login')
-                    </div>
+                    <div class="flex-grow-1"></div>
+                    @include('admin.parts.footer')
                 </div>
-                @include('admin.parts.footer')
             </div>
         </div>
 @endif

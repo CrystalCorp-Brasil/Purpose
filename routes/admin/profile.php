@@ -4,11 +4,11 @@
 
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::controller(ProfileController::class)->group(function () {
-            Route::get('/dashboard', 'dashboard')->name('dashboard');
-            Route::get('/perfil', 'edit')->name('profile.edit');
-            Route::patch('/profile/{id}', 'update')->name('profile.update');
-            Route::get('/perfil/exclusao', 'delete')->name('profile.delete');
-            Route::delete('/profile', 'destroy')->name('profile.destroy');
+            Route::get('/dashboard/perfil', 'dashboard')->name('dashboard');
+            Route::get('/dashboard/perfil/editar', 'edit')->name('profile.edit');
+            Route::patch('/dashboard/perfil/{id}', 'update')->name('profile.update');
+            Route::get('/dashboard/perfil/exclusao', 'delete')->name('profile.delete');
+            Route::delete('/dashboard/perfil', 'destroy')->name('profile.destroy');
         });
 
         Route::controller(UserImagesController::class)->group(function () {
