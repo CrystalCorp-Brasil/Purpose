@@ -2,24 +2,24 @@
                 <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
                     <ul class="navigation-left">
                         <li class="nav-item active" data-item="dashboard">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Dashboard</span></a>
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Home-4"></i><span class="nav-text">Dashboard</span></a>
                             <div class="triangle"></div>
                         </li>
+                        <li class="nav-item" data-item="images">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Suitcase"></i><span class="nav-text">Galeria de Imagens</span></a>
+                            <div class="triangle"></div>
+                        </li>
+                        <li class="nav-item" data-item="profile">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Pen-4"></i><span class="nav-text">Editar Perfil</span></a>
+                            <div class="triangle"></div>
+                        </li>
+@if (Auth::user()->rule == 'admin')
                         <li class="nav-item" data-item="resource">
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Ícones</span></a>
                             <div class="triangle"></div>
                         </li>
-@if (Auth::user()->rule == 'admin')
-                        <li class="nav-item" data-item="extrakits">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Suitcase"></i><span class="nav-text">Extra kits</span></a>
-                            <div class="triangle"></div>
-                        </li>
-                        <li class="nav-item" data-item="apps">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Apps</span></a>
-                            <div class="triangle"></div>
-                        </li>
-                        <li class="nav-item" data-item="forms">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-File-Clipboard-File--Text"></i><span class="nav-text">Forms</span></a>
+                        <li class="nav-item" data-item="finance">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Money-2"></i><span class="nav-text">Finanças</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item">
@@ -43,24 +43,45 @@
                 </div>
                 <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
                     <i class="sidebar-close i-Close" (click)="toggelSidebar()"></i>
-                    <header><a href="{{ route('dashboard') }}"><div class="logo"><img class="logo-img" src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp" /></div></a></header>
+                    <header>
+                        <a href="{{ route('dashboard') }}">
+                            <div class="logo"><img class="logo-img" src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp" /></div>
+                        </a>
+                        <p>Bem vindo, <span class="text-light">{{ Auth::user()->name }}</span>.</p>
+                    </header>
                     <div class="submenu-area" data-parent="dashboard">
                         <header>
                             <h6>Dashboard</h6>
-                            <p>Bem vindo, <span class="text-light">{{ Auth::user()->name }}</span>.</p>
+                            <p>Informações básicas de perfil.</p>
                         </header>
                         <ul class="childNav">
-                            <li class="nav-item"><a href="{{ route('image.upload') }}"><i class="nav-icon i-Clock-4"></i><span class="item-name">Adicionar Imagens</span></a></li>
+                            <li class="nav-item"><a href="{{ route('dashboard') }}"><i class="nav-icon i-Home-2"></i><span class="item-name">Dashboard</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="submenu-area" data-parent="images">
+                        <header>
+                            <h6>Imagens</h6>
+                            <p>Adicione ou visualize suas imagens.</p>
+                        </header>
+                        <ul class="childNav">
+                            <li class="nav-item"><a href="{{ route('image.upload') }}"><i class="nav-icon i-Upload-Window"></i><span class="item-name">Adicionar Imagem</span></a></li>
+                            <li class="nav-item"><a href="{{ route('image.gallery') }}"><i class="nav-icon i-Folder-Pictures"></i><span class="item-name">Galeria de Imagens</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="submenu-area" data-parent="profile">
+                        <header>
+                            <h6>Perfil</h6>
+                            <p>Atualize, edite ou exclua seu perfil.</p>
+                        </header>
+                        <ul class="childNav">
                             <li class="nav-item"><a href="{{ route('profile.edit') }}"><i class="nav-icon i-Pen-3"></i><span class="item-name">Editar Perfil</span></a></li>
                             <li class="nav-item"><a href="{{ route('profile.delete') }}"><i class="nav-icon i-Remove-User"></i><span class="item-name">Excluir Conta</span></a></li>
-                            <li class="nav-item"><a href="dashboard4.html"><i class="nav-icon i-Clock"></i><span class="item-name">Version 4</span></a></li>
                         </ul>
                     </div>
 @if (Auth::user()->rule == 'admin')
-                    <div class="submenu-area" data-parent="forms">
+                    <div class="submenu-area" data-parent="finance">
                         <header>
-                            <h6>Forms</h6>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <h6>Finanças</h6>
                         </header>
                         <ul class="childNav">
                             <li class="nav-item"><a href="form.basic.html"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Basic Elements</span></a></li>
@@ -70,32 +91,6 @@
                             <li class="nav-item"><a href="smart.wizard.html"><i class="nav-icon i-Width-Window"></i><span class="item-name">Smart Wizard</span></a></li>
                             <li class="nav-item"><a href="tag.input.html"><i class="nav-icon i-Tag-2"></i><span class="item-name">Tag Input</span></a></li>
                             <li class="nav-item"><a href="editor.html"><i class="nav-icon i-Pen-2"></i><span class="item-name">Rich Editor</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="submenu-area" data-parent="apps">
-                        <header>
-                            <h6>Apps</h6>
-                            <p>Lorem ipsum dolor sit.</p>
-                        </header>
-                        <ul class="childNav">
-                            <li class="nav-item"><a href="invoice.html"><i class="nav-icon i-Add-File"></i><span class="item-name">Invoice</span></a></li>
-                            <li class="nav-item"><a href="inbox.html"><i class="nav-icon i-Email"></i><span class="item-name">Inbox</span></a></li>
-                            <li class="nav-item"><a href="chat.html"><i class="nav-icon i-Speach-Bubble-3"></i><span class="item-name">Chat</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="submenu-area" data-parent="extrakits">
-                        <header>
-                            <h6>Extra Kits</h6>
-                            <p>Lorem ipsum dolor sit.</p>
-                        </header>
-                        <ul class="childNav">
-                            <li class="nav-item"><a href="image.cropper.html"><i class="nav-icon i-Crop-2"></i><span class="item-name">Image Cropper</span></a></li>
-                            <li class="nav-item"><a href="loaders.html"><i class="nav-icon i-Loading-3"></i><span class="item-name">Loaders</span></a></li>
-                            <li class="nav-item"><a href="ladda.button.html"><i class="nav-icon i-Loading-2"></i><span class="item-name">Ladda Buttons</span></a></li>
-                            <li class="nav-item"><a href="toastr.html"><i class="nav-icon i-Bell"></i><span class="item-name">Toastr</span></a></li>
-                            <li class="nav-item"><a href="sweet.alerts.html"><i class="nav-icon i-Approved-Window"></i><span class="item-name">Sweet Alerts</span></a></li>
-                            <li class="nav-item"><a href="tour.html"><i class="nav-icon i-Plane"></i><span class="item-name">User Tour</span></a></li>
-                            <li class="nav-item"><a href="upload.html"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Upload</span></a></li>
                         </ul>
                     </div>
 @endif

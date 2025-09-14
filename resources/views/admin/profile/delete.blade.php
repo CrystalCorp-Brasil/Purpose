@@ -14,6 +14,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="clearfix my-2"></div>
                     @include('admin.profile.parts.modalDeleteUser')
 @endsection
 @section('script')

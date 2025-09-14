@@ -14,4 +14,3 @@
                         </div>
                     </div>
                     <div class="ml-4 text-center text-small">Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</div>
-                </div>

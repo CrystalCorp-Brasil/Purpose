@@ -9,8 +9,15 @@
     class UserImagesController extends Controller {
         public function upload(){
             $user = Auth::user();
-            return \view('admin/profile/upload');
+            return \view('admin/profile/upload',compact('user'));
         }
+
+        public function gallery(){
+            $user = Auth::user();
+            $images = Image::select('*')->where('user_id',$user->id)->get();
+            return \view('admin/profile/gallery', compact('images','user'));
+        }
+
         public function store(UserImageRequest $request) {
             $request->validated();
             $user = User::find($request->id);

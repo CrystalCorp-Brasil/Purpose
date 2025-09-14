@@ -40,6 +40,7 @@
                         </ul>
                     </div>
                     <div class="separator-breadcrumb border-top"></div>
+                    @include('admin.profile.parts.header')
 @endif
 @yield('content')
 @if ($pageActive != 'login')
@@ -59,6 +60,7 @@
         <script src="{{ asset('admin/js/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('admin/js/imagesloaded.pkgd.js') }}"></script>
         <script src="{{ asset('admin/js/scripts.js') }}"></script>
+@include('sweetalert2::index')
 @if (session('success'))
         <script>
             Swal.fire({
@@ -71,6 +73,5 @@
         </script>
 @endif
 @yield('script')
-@include('sweetalert2::index')
     </body>
 </html>

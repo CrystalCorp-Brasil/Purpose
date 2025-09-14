@@ -48,6 +48,7 @@
                             </div>
                         </div>
                     </form>
+                    <div class="clearfix my-2"></div>
 @endsection
 @section('script')
 @error('title')

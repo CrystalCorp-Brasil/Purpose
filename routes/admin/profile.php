@@ -13,6 +13,7 @@
 
         Route::controller(UserImagesController::class)->group(function () {
             Route::get('/dashboard/imagens', 'upload')->name('image.upload');
+            Route::get('/dashboard/imagens/galeria', 'gallery')->name('image.gallery');
             Route::patch('/dashboard/imagens', 'store')->name('image.store');
         });
     });
