@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil','route'=>'dashboard'])
-@section('title') | Edição @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
+@section('title') Edição @endsection
 @section('content')
                     <div class="row mb-3">
                         <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">

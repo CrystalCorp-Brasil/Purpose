@@ -1,4 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'login'])
+@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'auth'])
+@section('title')Registro @endsection
 @section('content')
         <main class="main min-vh-100" id="top">
             <section class="py-0">
@@ -40,7 +41,7 @@
                                         </div>
                                         <div class="mb-0">
                                             <div class="form-group row py-0">
-                                                <label class="col-form-label text-orange py-0" for="email">Insira seu E-mail ou Usuário</label>
+                                                <label class="col-form-label text-orange py-0" for="email">Insira seu E-mail</label>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-user"></i></span>
                                                     <input class="form-control" @error('email') is-invalid @enderror type="email" id="email" name="email"  placeholder="Email" value="{{ old('email') }}" autocomplete="email" autofocus>

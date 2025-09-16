@@ -35,6 +35,9 @@
                                 <div class="col-sm-auto pe-4">
                                     <a class="fancy-dropdown-item" href=""> Projetos</a>
                                 </div>
+                                <div class="col-sm-auto pe-4">
+                                    <a class="fancy-dropdown-item" href="{{ route('imgGallery') }}"> Galeria</a>
+                                </div>
                             </div>
                         </div>
                     </li>

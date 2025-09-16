@@ -1,4 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'login'])
+@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'auth'])
+@section('title')Confirmação @endsection
 @section('content')
         <div class="auth-layout-wrap" style="background-image: url({{ asset('images/BGHome.jpg') }})">
             <div class="auth-content">

@@ -8,7 +8,7 @@
                                                     <div class="card-img-overlay">
                                                         <div class="p-1 card-footer font-weight-light d-flex">
                                                             <span class="me-3 d-flex align-items-center text-capitalize"><i class="fa fa-star me-1"></i> {{ $image->title }}</span>
-                                                            <span class="d-flex align-items-center"><i class="i-Calendar-4 me-2"></i>{{ $image->created_at->now()->format('d/m/Y') }}</span>
+                                                            <span class="d-flex align-items-center"><i class="i-Calendar-4 me-2"></i>{{ $data }}</span>
                                                         </div>
                                                     </div>
                                                 </div>

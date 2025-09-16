@@ -1,4 +1,4 @@
-@extends('layouts.web',['pageActive'=>'','elementActive'=>'terms'])
+@extends('layouts.web')
 @section('title')Termos de Uso @endsection
 @section('style')
         <link href="{{ asset('css/terms.css') }}" rel="stylesheet"/>

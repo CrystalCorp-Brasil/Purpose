@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Excluir Perfil','route'=>'dashboard'])
-@section('title') | Exclusão @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Excluir Perfil'])
+@section('title') Exclusão @endsection
 @section('content')
                     <div class="card">
                         <div class="card-body">

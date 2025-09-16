@@ -71,7 +71,7 @@
                                 <img src="@if(Auth::user()->image == null){{ asset('images/adm/user.png') }}@else{{ asset(Auth::user()->image) }}@endif" alt="{{ Auth::user()->name }}" id="userDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                                     <div class="dropdown-header"><i class="i-Lock-User me-1"></i> {{ Auth::user()->name }}</div>
-                                    <a href="{{ route('home') }}" class="dropdown-item"><i class="far fa-home-lg-alt"></i><span class="ms-2"> Home</span></a>
+                                    <a href="{{ route('home') }}" class="dropdown-item"><i class="far fa-home-lg-alt"></i><span class="ms-2"> Página Inicial</span></a>
 @if (Auth::user()->rule == 'admin')
                                     <a href="" class="dropdown-item"><i class="far fa-sign-out-alt"></i><span class="ml-2"> Billing history</span></a>
 @endif

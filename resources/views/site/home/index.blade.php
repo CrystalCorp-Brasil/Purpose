@@ -1,4 +1,4 @@
-@extends('layouts.web',['pageActive'=>'home'])
+@extends('layouts.web')
 @section('content')
             @include('site.home.sections.mosaic')
             @include('site.home.sections.register')

@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8"/>
-        <title>CrystalCorp @yield('title')</title>
+        <title>CrystalCorp | @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="CrystalCorp Brasil Admin & Dashboard"/>
         <meta name="author" content="NHOJunior Design"/>
@@ -19,7 +19,7 @@
     </head>
     <body class="{{ $bodyClass }}">
         @include('layouts.preloader')
-@if ($pageActive != 'login')
+@if ($pageActive != 'auth')
         <div class="app-admin-wrap layout-sidebar-compact sidebar-gradient-black-blue sidenav-open clearfix">
             @include('admin.parts.sidebar')
             <div class="main-content-wrap d-flex flex-column p-0">
@@ -41,14 +41,14 @@
                     <div class="breadcrumb">
                         <h1>{{ $title }}</h1>
                         <ul>
-                            <li><a href="{{ route($route) }}">Dashboard&nbsp;</a></li>
+                            <li><a href="{{ route('dashboard') }}">Dashboard&nbsp;</a></li>
                             <li class="text-muted">{{ $title }}</li>
                         </ul>
                     </div>
                     <div class="separator-breadcrumb border-top"></div>
 @endif
 @yield('content')
-@if ($pageActive != 'login')
+@if ($pageActive != 'auth')
                     <div class="flex-grow-1"></div>
                     @include('admin.parts.footer')
                 </div>

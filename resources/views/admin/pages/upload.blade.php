@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Imagens','route'=>'dashboard'])
-@section('title') | Imagens @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Imagens'])
+@section('title') Upload @endsection
 @section('content')
                     <div class="row">
                         <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
@@ -14,20 +14,20 @@
                                             <h4 class="pt-2">Upload de Imagem</h4><br>
                                             <p class="pt-2">Adicione Imagens para sua Galeria e exibição no site.</p>
                                             <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label text-primary" for="title">Título :</label>
+                                                <label class="col-sm-2 col-form-label text-orange" for="title">Título :</label>
                                                 <div class="col-sm-10">
                                                     <input type="hidden" id="id" name="id" value="{{ Auth::user()->id }}">
                                                     <input class="form-control" id="title" name="title" type="text" placeholder="Título" value="{{ old('title') }}" autofocus autocomplete="title"/>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label text-primary" for="descr">Descrição :</label>
+                                                <label class="col-sm-2 col-form-label text-orange" for="descr">Descrição :</label>
                                                 <div class="col-sm-10">
                                                     <input class="form-control" id="descr" name="descr" type="text" placeholder="Descrição (Opcional)" value="{{ old('descr') }}" autocomplete="descr"/>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label text-primary" for="image">Imagem :</label>
+                                                <label class="col-sm-2 col-form-label text-orange" for="image">Imagem :</label>
                                                 <div class="col-sm-10">
                                                     <input type="file" class="form-control" id="image" name="image" accept="image/*" autocomplete="image"/>
                                                 </div>

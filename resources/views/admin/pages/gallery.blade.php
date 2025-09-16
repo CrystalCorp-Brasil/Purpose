@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Galeria','route'=>'dashboard'])
-@section('title') | Galeria @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Galeria'])
+@section('title') Galeria @endsection
 @section('content')
                     <div class="card user-profile o-hidden mb-4">
                         <div class="header-cover" style="background-image: url('{{ asset('images/adm/crystalcorp.jpg') }}');"></div>

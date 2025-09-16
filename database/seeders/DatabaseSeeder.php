@@ -11,5 +11,6 @@
             User::factory()->create(['name' => 'Test User','email' => 'test@example.com',]); */
             $this->call(UserSeeder::class);
             $this->call(IconSeeder::class);
+            $this->call(ImageSeeder::class);
         }
     }

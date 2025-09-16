@@ -1,4 +1,4 @@
-@extends('layouts.web',['pageActive'=>'','elementActive'=>'privacyPolicy'])
+@extends('layouts.web')
 @section('title')Política de Privacidade @endsection
 @section('style')
         <link href="{{ asset('css/terms.css') }}" rel="stylesheet"/>

@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Perfil','route'=>'dashboard'])
-@section('title') | Perfil @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Perfil'])
+@section('title') Perfil @endsection
 @section('content')
                     <div class="card user-profile o-hidden">
                         <div class="header-cover" style="background-image: url('{{ asset('images/adm/crystalcorp.jpg') }}');"></div>

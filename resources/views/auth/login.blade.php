@@ -1,4 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'login'])
+@extends('layouts.adm',['bodyClass'=>'overflow-hidden-x','pageActive'=>'auth'])
+@section('title')Autenticação @endsection
 @section('content')
         <main class="main min-vh-100" id="top">
             <section class="py-0">
