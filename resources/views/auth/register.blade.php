@@ -20,51 +20,56 @@
                                     <form class="mt-5" method="POST" action="{{ route('register') }}">
                                         @csrf
 
-                                        <div class="mb-3">
-                                            <div class="form-group row pt-4">
-                                                <label class="col-sm-3 col-form-label text-primary" for="name">Nome</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" name="name" class="form-control bg-light" placeholder="Nome" value="{{ old('name') }}" autofocus autocomplete="off"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="form-group row pt-4">
-                                                <label class="col-sm-3 col-form-label text-primary" for="username">Usuário</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" name="username" class="form-control bg-light" placeholder="Usuário" value="{{ old('username') }}" autofocus autocomplete="off"/>
+                                        <div class="mb-0">
+                                            <div class="form-group row py-0">
+                                                <label class="col-form-label text-orange py-0" for="name">Insira seu Nome</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-user"></i></span>
+                                                    <input class="form-control" @error('name') is-invalid @enderror type="name" id="name" name="name"  placeholder="Nome" value="{{ old('name') }}" autocomplete="name" autofocus>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-0">
-                                            <div class="form-group row pt-4">
-                                                <label class="col-sm-3 col-form-label text-primary" for="email">E-mail</label>
-                                                <div class="col-sm-9">
-                                                    <input type="email" name="email" class="form-control bg-light" placeholder="E-mail" value="{{ old('email') }}" autocomplete="off"/>
+                                            <div class="form-group row py-0">
+                                                <label class="col-form-label text-orange py-0" for="username">Insira um nome de Usuário</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-user"></i></span>
+                                                    <input class="form-control" @error('username') is-invalid @enderror type="username" id="username" name="username"  placeholder="Nome de Usuário" value="{{ old('username') }}" autocomplete="username" autofocus>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-0">
-                                            <div class="form-group row pt-4">
-                                                <label class="col-sm-3 col-form-label text-primary" for="email">Senha</label>
-                                                <div class="col-sm-9">
-                                                    <input type="password" name="password" class="form-control bg-light" placeholder="Senha" autocomplete="off"/>
+                                            <div class="form-group row py-0">
+                                                <label class="col-form-label text-orange py-0" for="email">Insira seu E-mail ou Usuário</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-user"></i></span>
+                                                    <input class="form-control" @error('email') is-invalid @enderror type="email" id="email" name="email"  placeholder="Email" value="{{ old('email') }}" autocomplete="email" autofocus>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-0">
-                                            <div class="form-group row pt-4">
-                                                <label class="col-sm-3 col-form-label text-primary" for="email">Confirmação</label>
-                                                <div class="col-sm-9">
-                                                    <input type="password" name="password_confirmation" class="form-control bg-light" placeholder="Confirme a Senha" autocomplete="off"/>
+                                            <div class="form-group row py-0">
+                                                <label class="col-form-label text-orange py-0" for="password">Insira sua Senha</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-key"></i></span>
+                                                    <input class="form-control" @error('password') is-invalid @enderror type="password" id="password" name="password" placeholder="Senha" required autocomplete="current-password"/>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="mb-3 d-grid"><button class="btn btn-login mt-4" type="submit" name="submit"><i class="far fa-save"></i>&nbsp;&nbsp;Registrar</button></div></br>
+                                        <div class="mb-0">
+                                            <div class="form-group row py-0">
+                                                <label class="col-form-label text-orange py-0" for="password">Confirme a Senha</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-key"></i></span>
+                                                    <input class="form-control" @error('password') is-invalid @enderror type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirme a Senha" autocomplete="current-password"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 d-grid"><button class="btn btn-a-link-1" type="submit" name="submit"><i class="far fa-save"></i>&nbsp;&nbsp;Registrar</button></div></br>
                                     </form>
                                     <div class="col-sm-12 text-center">
                                         <h6>Já tem uma conta?</h6>
-                                        <a href="{{ route('login') }}" class="btn btn-outline-info btn-rounded mt-2 w-50"><i class="fa fa-user"></i>&nbsp;&nbsp;<b>Logar</b></a>
+                                        <a href="{{ route('login') }}" class="btn btn-outline-info btn-rounded w-50"><i class="fa fa-user"></i>&nbsp;&nbsp;<b>Logar</b></a>
                                     </div>
                                 </div>
                             </div>

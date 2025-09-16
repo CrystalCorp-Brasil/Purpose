@@ -1,8 +1,8 @@
-                <div class="header-part-right">
+                    <div class="header-part-right">
 @if (Auth::user()->rule == 'admin')
                         <div class="dropdown">
                             <i class="i-Safe-Box text-muted header-icon" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                            <div class="dropdown-menu dm-menu" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu dm-menu p-0 mt-3" aria-labelledby="dropdownMenuButton">
                                 <div class="menu-icon-grid">
                                     <a href="#"><i class="i-Shop-4"></i> Home</a>
                                     <a href="#"><i class="i-Library"></i> UI Kits</a>
@@ -15,8 +15,8 @@
                         </div>
 @endif
                         <div class="dropdown">
-                            <div class="badge-top-container" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="badge bg-primary">3</span><i class="i-Bell text-muted header-icon"></i></div>
-                            <div class="dropdown-menu dropdown-menu-right notification-dropdown rtl-ps-none" aria-labelledby="dropdownNotification" data-perfect-scrollbar data-suppress-scroll-x="true">
+                            <div class="badge-top-container" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="badge bg-primary text-warning">3</span><i class="i-Bell text-muted header-icon"></i></div>
+                            <div class="dropdown-menu dropdown-menu-right notification-dropdown rtl-ps-none mt-3" aria-labelledby="dropdownNotification" data-perfect-scrollbar data-suppress-scroll-x="true">
                                 <div class="dropdown-item d-flex">
                                     <div class="notification-icon"><i class="i-Speach-Bubble-6 text-primary me-1"></i></div>
                                     <div class="notification-details flex-grow-1">
@@ -73,13 +73,15 @@
                                     <div class="dropdown-header"><i class="i-Lock-User me-1"></i> {{ Auth::user()->name }}</div>
                                     <a href="{{ route('home') }}" class="dropdown-item"><i class="far fa-home-lg-alt"></i><span class="ms-2"> Home</span></a>
 @if (Auth::user()->rule == 'admin')
-                                    <a class="dropdown-item">Billing history</a>
+                                    <a href="" class="dropdown-item"><i class="far fa-sign-out-alt"></i><span class="ml-2"> Billing history</span></a>
 @endif
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
+                                    <div class="dropdown-item">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
 
-                                        <button class="btn btn-corp-a" type="submit"><i class="far fa-sign-out-alt"></i><span class="ms-2"> Encerrar</span></button>
-                                    </form>
+                                            <button class="btn p-0 text-font-16" type="submit"><i class="far fa-sign-out-alt"></i><span class="ml-2"> Encerrar</span></button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

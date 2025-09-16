@@ -1,67 +1,63 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil','route'=>'dashboard'])
 @section('title') | Edição @endsection
 @section('content')
-                    <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
-                        @csrf
+                    <div class="row mb-3">
+                        <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
 
-                        @method('PATCH')
+                            @method('PATCH')
 
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h4 class="text-center">{{ __('Profile Information') }}</h4><br>
-                                        <p class="text-center mb-3">{{ __("Update your account's profile information and email address.") }}</p>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label text-primary" for="name">Nome :</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control" id="name" name="name" type="text" value="{{ old('name', $user->name) }}" required autofocus autocomplete="name"/>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h4 class="text-center">{{ __('Profile Information') }}</h4><br>
+                                            <p class="text-center mb-3">{{ __("Update your account's profile information and email address.") }}</p>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label text-primary" for="name">Nome :</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" id="name" name="name" type="text" value="{{ old('name', $user->name) }}" required autofocus autocomplete="name"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row pt-4">
+                                                <label class="col-sm-2 col-form-label text-primary" for="email">E-mail</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" id="email" name="email" type="email" class="mt-1 block w-full" value="{{ old('email', $user->email) }}" required autocomplete="email">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group row pt-4">
-                                            <label class="col-sm-2 col-form-label text-primary" for="email">E-mail</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control" id="email" name="email" type="email" class="mt-1 block w-full" value="{{ old('email', $user->email) }}" required autocomplete="email">
+                                        <div class="col-md-3 pt-5">
+                                            <div class="form-group row">
+                                                <div class="col-sm-8 offset-3">
+                                                    <img src="@if($user->image == null){{ asset('images/adm/user.png') }}@else{{ asset($user->image) }}@endif" alt="{{ $user->name }}" width="150"/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 mt-5">
-                                        <div class="form-group row">
-                                            <div class="col-sm-8 offset-3">
-                                                <img src="@if($user->image == null){{ asset('images/adm/user.png') }}@else{{ asset($user->image) }}@endif" alt="{{ $user->name }}" width="150"/>
-                                            </div>
+                                    <div class="row pt-5">
+                                        <div class="form-group">
+                                            <div class="col-sm-12"><input type="file" class="form-control" id="image" name="image" accept="image/*"/></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row pt-5">
-                                    <div class="form-group">
-                                        <div class="col-sm-12"><input type="file" class="form-control" id="image" name="image" accept="image/*"/></div>
+                                    <div class="row">
+                                        <div class="col-md-12 py-3">
+                                            <div class="form-group row"><textarea id="editor" name="bio">{!! $user->bio !!}</textarea></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix m-3"></div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group row py-5"><textarea id="editor" name="bio">{!! $user->bio !!}</textarea></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group row">
-                                            <div class="col-sm-12"><button class="btn w-100 btn-outline-warning" type="submit">Salvar</button></div>
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <div class="form-group row">
+                                                <div class="col-sm-12"><button class="btn btn-outline-warning px-5" type="submit">Salvar</button></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                    <div class="clearfix my-2"></div>
+                        </form>
+                    </div>
 @endsection
 @section('script')
-    <script src="{{ asset('admin/js/tinymce/tinymce.min.js') }}" referrerpolicy="origin" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/admin/tinymce/tinymce.min.js') }}" referrerpolicy="origin" crossorigin="anonymous"></script>
     <script>
         tinymce.init({
             selector: 'textarea#editor',

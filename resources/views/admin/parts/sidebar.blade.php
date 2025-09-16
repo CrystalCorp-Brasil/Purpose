@@ -10,7 +10,7 @@
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="profile">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Pen-4"></i><span class="nav-text">Editar Perfil</span></a>
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Checked-User"></i><span class="nav-text">Editar Perfil</span></a>
                             <div class="triangle"></div>
                         </li>
 @if (Auth::user()->rule == 'admin')
@@ -45,9 +45,9 @@
                     <i class="sidebar-close i-Close" (click)="toggelSidebar()"></i>
                     <header>
                         <a href="{{ route('dashboard') }}">
-                            <div class="logo"><img class="logo-img" src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp" /></div>
+                            @include('admin.parts.logo')
                         </a>
-                        <p>Bem vindo, <span class="text-light">{{ Auth::user()->name }}</span>.</p>
+                        <p>Bem vindo, <span class="text-orange">{{ Auth::user()->name }}</span>.</p>
                     </header>
                     <div class="submenu-area" data-parent="dashboard">
                         <header>

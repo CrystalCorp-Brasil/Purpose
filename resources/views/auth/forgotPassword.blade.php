@@ -12,8 +12,12 @@
                                 <form method="POST" action="{{ route('password.email') }}">
                                     @csrf
 
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" name="email" type="email" placeholder="E-mail" value="{{ old('email') }}" autofocus autocomplete="email"/>
+                                    <div class="form-group row pt-4">
+                                        <label class="col-form-label text-orange" for="email">Insira seu E-mail ou Usuário</label>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text px-3" id="basic-addon3"><i class="fad fa-user"></i></span>
+                                            <input class="form-control" type="email" id="email" name="email" @error('email') is-invalid @enderror" placeholder="email ou usuário" autocomplete="email" autofocus>
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn w-100 btn-outline-warning btn-rounded mt-3">Enviar E-mail</button>
                                 </form>
@@ -39,7 +43,7 @@
 @error('email')
         <script>
             Swal.fire({
-                icon: 'info',
+                icon: 'error',
                 title: 'Atenção!',
                 text: '{{ $message }}',
                 showConfirmButton: true,

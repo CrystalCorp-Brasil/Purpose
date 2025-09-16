@@ -15,9 +15,13 @@
 /node_modules
 /public/build
 /public/hot
-/public/admin
+/public/css/
+/public/css/admin
+/public/css/site
+/public/js/
+/public/js/admin
+/public/js/site
 /public/images
-/public/site
 /public/uploads
 /public/webfonts
 /public/storage

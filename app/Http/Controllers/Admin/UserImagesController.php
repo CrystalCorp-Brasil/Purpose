@@ -14,7 +14,7 @@
 
         public function gallery(){
             $user = Auth::user();
-            $images = Image::select('*')->where('user_id',$user->id)->get();
+            $images = Image::select('*')->where('user_id',$user->id)->paginate(6);
             return \view('admin/profile/gallery', compact('images','user'));
         }
 
@@ -32,6 +32,6 @@
             $image->image = 'uploads/users/'.$request->id.'/'.$fileImg;
             $image->user_id = $request->id;
             $image->save();
-            return Redirect::route('dashboard')->with('success','Upload efetuado com sucesso!');
+            return Redirect::route('image.gallery')->with('success','Upload efetuado com sucesso!');
         }
     }

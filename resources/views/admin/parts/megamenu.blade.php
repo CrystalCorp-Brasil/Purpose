@@ -10,8 +10,8 @@
                                         <button class="btn btn-lg btn-rounded btn-outline-warning">Learn More</button>
                                     </div>
                                     <div class="col-md-4 p-4">
-                                        <p class="text-primary text--cap border-bottom-primary d-inline-block">Features</p>
-                                        <div class="menu-icon-grid w-auto p-0">
+                                        <p class="text-orange border-bottom-warning d-inline-block">Features</p>
+                                        <div class="menu-icon-grid w-auto p-0 btn-rounded">
                                             <a href="#"><i class="i-Shop-4"></i> Home</a>
                                             <a href="#"><i class="i-Library"></i> UI Kits</a>
                                             <a href="#"><i class="i-Drop"></i> Apps</a>
@@ -21,7 +21,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-4">
-                                        <p class="text-primary text--cap border-bottom-primary d-inline-block">Components</p>
+                                        <p class="text-orange border-bottom-warning d-inline-block">Components</p>
                                         <ul class="links">
                                             <li><a href="accordion.html">Accordion</a></li>
                                             <li><a href="alerts.html">Alerts</a></li>

@@ -7,13 +7,14 @@
         <meta name="description" content="CrystalCorp Brasil Admin & Dashboard"/>
         <meta name="author" content="NHOJunior Design"/>
         <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon"/>
-        <link href="{{ asset('admin/css/lightbox.min.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('admin/css/fonts.css') }}" rel="stylesheet" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('admin/css/loaders.min.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('admin/css/perfect-scrollbar.min.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('admin/css/sweetalert2.min.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('admin/css/styles.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/admin/lightbox.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/admin/loaders.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/admin/perfect-scrollbar.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/sweetalert2.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/admin/theme.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/admin/styles.css') }}" rel="stylesheet" type="text/css"/>
 @yield('style')
     </head>
     <body class="{{ $bodyClass }}">
@@ -21,9 +22,14 @@
 @if ($pageActive != 'login')
         <div class="app-admin-wrap layout-sidebar-compact sidebar-gradient-black-blue sidenav-open clearfix">
             @include('admin.parts.sidebar')
-            <div class="main-content-wrap d-flex flex-column">
+            <div class="main-content-wrap d-flex flex-column p-0">
                 <div class="main-header">
                     @include('admin.parts.logo')
+                    <div class="menu-toggle">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
 @if (Auth::user()->rule == 'admin')
                     @include('admin.parts.megamenu')
 @endif
@@ -31,16 +37,15 @@
                     <div style="margin: auto"></div>
                     @include('admin.parts.header-right')
                 </div>
-                <div class="main-content mb-3">
+                <div class="main-content p-3 mb-2">
                     <div class="breadcrumb">
-                        <h1>Perfil de Usuário</h1>
+                        <h1>{{ $title }}</h1>
                         <ul>
-                            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                            <li>{{ $title }}</li>
+                            <li><a href="{{ route($route) }}">Dashboard&nbsp;</a></li>
+                            <li class="text-muted">{{ $title }}</li>
                         </ul>
                     </div>
                     <div class="separator-breadcrumb border-top"></div>
-                    @include('admin.profile.parts.header')
 @endif
 @yield('content')
 @if ($pageActive != 'login')
@@ -50,16 +55,12 @@
             </div>
         </div>
 @endif
-        <script src="{{ asset('admin/js/jquery-3.3.1.min.js') }}"></script>
-        <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('admin/js/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ asset('admin/js/script.min.js') }}"></script>
-        <script src="{{ asset('admin/js/sidebar.compact.script.min.js') }}"></script>
-        <script src="{{ asset('admin/js/customizer.script.min.js') }}"></script>
-        <script src="{{ asset('admin/js/lightbox.min.js') }}"></script>
-        <script src="{{ asset('admin/js/sweetalert2.min.js') }}"></script>
-        <script src="{{ asset('admin/js/imagesloaded.pkgd.js') }}"></script>
-        <script src="{{ asset('admin/js/scripts.js') }}"></script>
+        <script src="{{ asset('js/admin/jquery.min.3.4.1.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/admin/perfect-scrollbar.min.js') }}"></script>
+        <script src="{{ asset('js/admin/lightbox.min.js') }}"></script>
+        <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('js/admin/scripts.js') }}"></script>
 @include('sweetalert2::index')
 @if (session('success'))
         <script>

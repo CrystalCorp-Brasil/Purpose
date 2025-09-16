@@ -65,8 +65,10 @@
                             </div>
                         </div>
                     </li>
-                    <li class="fancynav-item"><a class="fancynav-link" href=""><span class="fancynav-link-content">faqs</span></a></li>
                     <li class="fancynav-item"><a class="fancynav-link" href=""><span class="fancynav-link-content">contato</span></a></li>
+                    <li class="fancynav-item"><a class="fancynav-link" href=""><span class="fancynav-link-content">faqs</span></a></li>
+                    <li class="fancynav-item"><a class="fancynav-link" href="{{ route('termsOfUse') }}"><span class="fancynav-link-content">termos de uso</span></a></li>
+                    <li class="fancynav-item"><a class="fancynav-link" href="{{ route('privacyPolicy') }}"><span class="fancynav-link-content">política de privacidade</span></a></li>
                 </ul>
             </div>
         </nav>

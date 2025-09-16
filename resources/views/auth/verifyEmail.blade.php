@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-md-10 offset-1">
                             <div class="p-4">
-                                <div class="auth-logo text-center mb-4"><a href="{{ route('login') }}"><img src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp"/></a></div>
+                                <div class="auth-logo text-center mb-4"><a href="{{ route('home') }}"><img src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp"/></a></div>
                                 <div class="mb-4 text-sm text-justify">{{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}</div>
 @if (session('status') == 'verification-link-sent')
                     <div class="mb-4 font-medium text-sm">{{ __('A new verification link has been sent to the email address you provided during registration.') }}</div>

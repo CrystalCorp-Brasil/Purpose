@@ -1,8 +1,8 @@
             <section class="py-8" id="LandingPremium">
-                <div class="bg-holder overlay overlay-0" style="background-image:url({{ asset('images/web/dcuo/gcc-site-005.jpg') }});"></div>
+                <div class="bg-holder overlay overlay-0" style="background-image:url({{ asset('images/web/dcuo/site-005.jpg') }});"></div>
                 <div class="container">
                     <div class="row flex-center">
-                        <div class="col-lg-6"><h1 class="fw-black mb-0">DC Universe<span class="fw-light"> Online</span></h1></div>
+                        <div class="col-lg-6 pl-5"><h1 class="fw-black mb-0 text-orange pl-5">DC Universe<span class="fw-light"> Online</span></h1></div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
                             <div class="row text-nowrap">
                                 <div class="col-sm-auto">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 overflow-hidden text-center border-top border-bottom border-secondary border-opacity-50 py-4 mt-5">
-                            <a class="font-secondary text-uppercase text-warning fw-black fs-8" href="https://www.dcuniverseonline.com/home" target="_blank">
+                            <a class="font-secondary text-uppercase text-orange text-decoration-none fw-black fs-8" href="https://www.dcuniverseonline.com/home" target="_blank">
                                 <div data-zanim-xs='{"delay":0.1,"from":{"opacity":0,"letter-spacing":"0.8em"},"to":{"letter-spacing":"0.2em","opacity":1}}' data-zanim-trigger="scroll">Jogue Grátis</div>
                             </a>
                         </div>

@@ -1,5 +1,5 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'resource','title'=>' | Ícones'])
-@section('title') | Cadastro @endsection
+@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'resource','title'=>'Ícones','route'=>'dashboard'])
+@section('title') | Ícones @endsection
 @section('content')
                 <div class="row">
                     <form action="{{ route('resource.store') }}" method="POST" enctype="multipart/form-data">

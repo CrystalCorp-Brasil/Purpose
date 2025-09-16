@@ -11,35 +11,35 @@
         <link href="{{ asset('favicon.png') }}" rel="apple-touch-icon" sizes="180x180">
         <link href="{{ asset('favicon.png') }}" rel="icon" type="image/png" sizes="32x32">
         <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
-        <link href="{{ asset('site/css/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('site/css/loaders.min.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('site/css/fonts.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/site/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/site/loaders.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('css/site/styles.css') }}" rel="stylesheet" type="text/css"/>
 @yield('styles')
-        <link href="{{ asset('site/css/theme.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('site/css/styles.css') }}" rel="stylesheet" type="text/css"/>
     </head>
+    <body class="overflow-hidden-x">
         @include('layouts.nav')
         <main class="main min-vh-100" id="top">
             @include('layouts.preloader')
 @yield('content')
         </main>
         @include('layouts.footer')
-        <script src="{{ asset('site/js/popper.min.js') }}"></script>
-        <script src="{{ asset('site/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('site/js/anchor.min.js') }}"></script>
-        <script src="{{ asset('site/js/is.min.js') }}"></script>
-        <script src="{{ asset('site/js/isotope.pkgd.min.js') }}"></script>
-        <script src="{{ asset('site/js/packery-mode.pkgd.min.js') }}"></script>
-        <script src="{{ asset('site/js/BigPicture.js') }}"></script>
-        <script src="{{ asset('site/js/rellax.min.js') }}"></script>
-        <script src="{{ asset('site/js/all.min.js') }}"></script>
-        <script src="{{ asset('site/js/lodash.min.js') }}"></script>
-        <script src="{{ asset('site/js/polyfill.min.js') }}"></script>
-        <script src="{{ asset('site/js/imagesloaded.pkgd.js') }}"></script>
-        <script src="{{ asset('site/js/gsap.js') }}"></script>
-        <script src="{{ asset('site/js/customEase.js') }}"></script>
-        <script src="{{ asset('site/js/drawSVGPlugin.js') }}"></script>
-        <script src="{{ asset('site/js/theme.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/site/anchor.min.js') }}"></script>
+        <script src="{{ asset('js/site/is.min.js') }}"></script>
+        <script src="{{ asset('js/site/isotope.pkgd.min.js') }}"></script>
+        <script src="{{ asset('js/site/packery-mode.pkgd.min.js') }}"></script>
+        <script src="{{ asset('js/site/BigPicture.js') }}"></script>
+        <script src="{{ asset('js/site/rellax.min.js') }}"></script>
+        <script src="{{ asset('js/site/all.min.js') }}"></script>
+        <script src="{{ asset('js/site/lodash.min.js') }}"></script>
+        <script src="{{ asset('js/site/polyfill.min.js') }}"></script>
+        <script src="{{ asset('js/site/imagesloaded.pkgd.js') }}"></script>
+        <script src="{{ asset('js/site/gsap.js') }}"></script>
+        <script src="{{ asset('js/site/customEase.js') }}"></script>
+        <script src="{{ asset('js/site/drawSVGPlugin.js') }}"></script>
+        <script src="{{ asset('js/site/theme.js') }}"></script>
 @yield('scripts')
     </body>
 </html>
