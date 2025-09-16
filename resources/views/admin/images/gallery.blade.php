@@ -1,4 +1,4 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Galeria'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Galeria'])
 @section('title') Galeria @endsection
 @section('content')
                     <div class="card user-profile o-hidden mb-4">

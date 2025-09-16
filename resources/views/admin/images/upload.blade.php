@@ -1,4 +1,4 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Imagens'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Imagens'])
 @section('title') Upload @endsection
 @section('content')
                     <div class="row">

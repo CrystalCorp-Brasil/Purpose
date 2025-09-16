@@ -1,4 +1,4 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Perfil'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Perfil'])
 @section('title') Perfil @endsection
 @section('content')
                     <div class="card user-profile o-hidden">

@@ -10,7 +10,7 @@
     class UserImagesController extends Controller {
         public function upload(){
             $user = Auth::user();
-            return \view('admin/pages/upload',compact('user'));
+            return \view('admin/images/upload',compact('user'));
         }
 
         public function gallery(){
@@ -19,7 +19,7 @@
             foreach ($images as $image) {
                 $data = Carbon::parse($image->created_at)->format('d/m/Y');
             }
-            return \view('admin/pages/gallery', compact('images','user','data'));
+            return \view('admin/images/gallery', compact('images','user','data'));
         }
 
         public function store(UserImageRequest $request) {

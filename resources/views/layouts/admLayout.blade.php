@@ -18,24 +18,24 @@
 @yield('style')
     </head>
     <body class="{{ $bodyClass }}">
-        @include('layouts.preloader')
+        @include('layouts.preLoader')
 @if ($pageActive != 'auth')
         <div class="app-admin-wrap layout-sidebar-compact sidebar-gradient-black-blue sidenav-open clearfix">
-            @include('admin.parts.sidebar')
+            @include('layouts.admSidebar')
             <div class="main-content-wrap d-flex flex-column p-0">
                 <div class="main-header">
-                    @include('admin.parts.logo')
+                    @include('layouts.admLogo')
                     <div class="menu-toggle">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
 @if (Auth::user()->rule == 'admin')
-                    @include('admin.parts.megamenu')
+                    @include('layouts.admMegaMenu')
 @endif
 @yield('searchSection')
                     <div style="margin: auto"></div>
-                    @include('admin.parts.header-right')
+                    @include('layouts.admHeaderRight')
                 </div>
                 <div class="main-content p-3 mb-2">
                     <div class="breadcrumb">
@@ -50,7 +50,7 @@
 @yield('content')
 @if ($pageActive != 'auth')
                     <div class="flex-grow-1"></div>
-                    @include('admin.parts.footer')
+                    @include('layouts.admFooter')
                 </div>
             </div>
         </div>

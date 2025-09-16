@@ -45,7 +45,7 @@
                     <i class="sidebar-close i-Close" (click)="toggelSidebar()"></i>
                     <header>
                         <a href="{{ route('dashboard') }}">
-                            @include('admin.parts.logo')
+                            @include('layouts.admLogo')
                         </a>
                         <p>Bem vindo, <span class="text-orange">{{ Auth::user()->name }}</span>.</p>
                     </header>

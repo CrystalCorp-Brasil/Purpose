@@ -1,4 +1,4 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'resource','title'=>'Ícones','route'=>'dashboard'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'resource','title'=>'Ícones','route'=>'dashboard'])
 @section('searchSection')
                     <div class="d-flex align-items-center mt-3">
                         <div class="row">

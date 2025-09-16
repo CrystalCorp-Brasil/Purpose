@@ -1,4 +1,4 @@
-@extends('layouts.web')
+@extends('layouts.webLayout')
 @section('title')Termos de Uso @endsection
 @section('style')
         <link href="{{ asset('css/terms.css') }}" rel="stylesheet"/>

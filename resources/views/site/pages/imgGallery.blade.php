@@ -1,4 +1,4 @@
-@extends('layouts.web')
+@extends('layouts.webLayout')
 @section('title')Galeria de Imagens @endsection
 @section('PageTitle')Galeria de Imagens @endsection
 @section('content')

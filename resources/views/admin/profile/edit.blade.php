@@ -1,4 +1,4 @@
-@extends('layouts.adm',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
 @section('title') Edição @endsection
 @section('content')
                     <div class="row mb-3">

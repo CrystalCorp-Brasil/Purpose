@@ -1,4 +1,4 @@
-@extends('layouts.web')
+@extends('layouts.webLayout')
 @section('content')
             @include('site.home.sections.mosaic')
             @include('site.home.sections.register')

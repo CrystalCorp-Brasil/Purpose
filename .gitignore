@@ -27,6 +27,7 @@
 /public/storage
 /resources/css
 /resources/js
+/resources/views/_model
 /storage/*.key
 /storage/pail
 /vendor

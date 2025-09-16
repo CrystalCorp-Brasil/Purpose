@@ -19,12 +19,12 @@
 @yield('styles')
     </head>
     <body class="overflow-hidden-x">
-        @include('layouts.nav')
+        @include('layouts.webNav')
         <main class="main min-vh-100" id="top">
-            @include('layouts.preloader')
+            @include('layouts.preLoader')
 @yield('content')
         </main>
-        @include('layouts.footer')
+        @include('layouts.webFooter')
         <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/site/anchor.min.js') }}"></script>
         <script src="{{ asset('js/site/is.min.js') }}"></script>
