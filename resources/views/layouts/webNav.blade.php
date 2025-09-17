@@ -30,13 +30,12 @@
                         <div class="fancy-dropdown-menu">
                             <div class="row pb-4 pt-3">
                                 <div class="col-sm-auto pe-4 ps-2">
-                                    <a class="fancy-dropdown-item" href=""> Sobre Nós</a>
-                                </div>
-                                <div class="col-sm-auto pe-4">
                                     <a class="fancy-dropdown-item" href=""> Projetos</a>
+                                    <a class="fancy-dropdown-item" href="{{ route('imgGallery') }}"> Galeria</a>
                                 </div>
                                 <div class="col-sm-auto pe-4">
-                                    <a class="fancy-dropdown-item" href="{{ route('imgGallery') }}"> Galeria</a>
+                                    <a class="fancy-dropdown-item" href="{{ route('editorial') }}"> Editoriais</a>
+                                    <a class="fancy-dropdown-item" href=""> Sobre Nós</a>
                                 </div>
                             </div>
                         </div>

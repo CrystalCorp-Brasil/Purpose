@@ -15,7 +15,7 @@
                                 <li class="nav-item"><a class="nav-link active" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">Galeria de Imagens</a></li>
                             </ul>
                             <div class="tab-content" id="profileTabContent">
-                                @include('admin.profile.parts.gallery')
+                                @include('admin.images.sections.gallery')
                             </div>
                         </div>
                     </div>

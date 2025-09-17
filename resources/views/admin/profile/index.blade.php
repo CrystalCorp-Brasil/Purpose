@@ -15,7 +15,7 @@
                                 <li class="nav-item"><a class="nav-link active" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">Informações Básicas</a></li>
                             </ul>
                             <div class="tab-content" id="profileTabContent">
-                                @include('admin.profile.parts.about')
+                                @include('admin.profile.sections.about')
                             </div>
                         </div>
                     </div>

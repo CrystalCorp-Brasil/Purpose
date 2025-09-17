@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="p-4">
-                                <div class="auth-logo text-center mb-4"><a href="{{ route('login') }}"><img src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp"/></a></div>
+                                <div class="auth-logo text-center mb-4"><a href="{{ route('home') }}"><img src="{{ asset('images/crystalcorp.png') }}" alt="CrystalCorp"/></a></div>
                                 <h1 class="text-center mb-3 text-18">Resetar Senha</h1>
                                 <form method="POST" action="{{ route('password.store') }}">
                                     <input type="hidden" name="token" value="{{ $request->route('token') }}">

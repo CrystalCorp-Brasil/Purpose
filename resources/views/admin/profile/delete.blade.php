@@ -14,7 +14,7 @@
                             </div>
                         </div>
                     </div>
-                    @include('admin.profile.parts.modalDeleteUser')
+                    @include('admin.profile.sections.modalDeleteUser')
 @endsection
 @section('script')
         <script>
