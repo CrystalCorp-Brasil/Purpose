@@ -2,27 +2,25 @@
     namespace App\Http\Controllers\Admin;
 
     use App\Http\Controllers\Controller;
-    use App\Http\Requests\ResourceRequest;
+    use App\Http\Requests\IconRequest;
     use Illuminate\Http\Request;
     use App\Models\Resource;
-    use Illuminate\Support\Facades\{Auth,Redirect};
+    use Illuminate\Support\Facades\Redirect;
 
-    class ResourceController extends Controller {
+    class IconController extends Controller {
         public function index(Request $request){
-            $user = Auth::user();
             $search = $request->input('search');
             $icons = Resource::when($search, function($query, $search) {
                 return $query->where('title', 'like', '%'.$search.'%');
             })->paginate(24);
-            return view('admin/resource/index',compact('user','icons','search'));
+            return view('admin/icon/index',compact('icons','search'));
         }
 
         public function create(){
-            $user = Auth::user();
-            return view('admin/resource/create',compact('user'));
+            return view('admin/icon/create');
         }
 
-        public function store(ResourceRequest $request) {
+        public function store(IconRequest $request) {
             $request->validated();
             $resource = new Resource();
             $resource->title = $request->title;

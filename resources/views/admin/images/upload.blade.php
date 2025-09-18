@@ -1,4 +1,4 @@
-@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'galeria','title'=>'Imagens'])
+@extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'gallery','title'=>'Imagens'])
 @section('title') Upload @endsection
 @section('content')
                     <div class="row">
@@ -9,7 +9,7 @@
 
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row  text-center">
+                                    <div class="row text-center">
                                         <div class="col-md-8 offset-2">
                                             <h4 class="pt-2">Upload de Imagem</h4><br>
                                             <p class="pt-2">Adicione Imagens para sua Galeria e exibição no site.</p>

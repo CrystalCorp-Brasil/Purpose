@@ -1,4 +1,4 @@
-                            <div class="row px-2">
+                            <div class="row px-5">
                                 <div class="col">
                                     <form class="input-iconic">
                                         <div class="input-icon"><button type="submit"><span class="fas fa-search text-body-tertiary"></span></button></div>

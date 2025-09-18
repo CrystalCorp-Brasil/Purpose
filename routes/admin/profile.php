@@ -1,5 +1,5 @@
 <?php
-    use App\Http\Controllers\Admin\{ProfileController,UserImagesController};
+    use App\Http\Controllers\Admin\{ProfileController,ImagesController};
     use Illuminate\Support\Facades\Route;
 
     Route::middleware(['auth', 'verified'])->group(function () {
@@ -11,9 +11,11 @@
             Route::delete('/dashboard/perfil', 'destroy')->name('profile.destroy');
         });
 
-        Route::controller(UserImagesController::class)->group(function () {
-            Route::get('/dashboard/imagens', 'upload')->name('image.upload');
-            Route::get('/dashboard/imagens/galeria', 'gallery')->name('image.gallery');
+        Route::controller(ImagesController::class)->group(function () {
+            Route::get('/dashboard/imagens/galeria', 'index')->name('image.index');
+            Route::get('/dashboard/imagens', 'create')->name('image.create');
             Route::patch('/dashboard/imagens', 'store')->name('image.store');
+            Route::get('/dashboard/imagens/exclusao', 'delete')->name('image.delete');
+            Route::delete('/dashboard/imagens/{id}', 'destroy')->name('image.destroy');
         });
     });

@@ -13,7 +13,5 @@
             });
         }
 
-        public function down(): void {
-            Schema::dropIfExists('resources');
-        }
+        public function down(): void {Schema::dropIfExists('resources');}
     };

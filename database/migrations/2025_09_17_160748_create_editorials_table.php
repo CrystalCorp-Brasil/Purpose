@@ -5,20 +5,17 @@
 
     return new class extends Migration {
         public function up(): void {
-            Schema::create('images', function (Blueprint $table) {
+            Schema::create('editorials', function (Blueprint $table) {
                 $table->id();
                 $table->string('title');
                 $table->string('slug');
-                $table->string('descr')->nullable();
-                $table->text('image');
+                $table->text('publish');
+                $table->text('cover')->nullable();
+                $table->integer('visits')->default(0);
                 $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
                 $table->timestamps();
             });
         }
-        public function down(): void {
-            //Schema::dropIfExists('images');
-            Schema::table('images', function (Blueprint $table) {
-                $table->dropForeign(['user_id']);
-            });
-        }
+
+        public function down(): void {Schema::dropIfExists('editorials');}
     };

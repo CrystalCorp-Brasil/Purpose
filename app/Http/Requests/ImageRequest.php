@@ -1,11 +1,8 @@
 <?php
     namespace App\Http\Requests;
 
-    use App\Models\Image;
     use Illuminate\Foundation\Http\FormRequest;
-    use Illuminate\Validation\Rule;
-
-    class UserImageRequest extends FormRequest {
+        class ImageRequest extends FormRequest {
         public function rules(): array {
             return [
                 'title' => ['required', 'string', 'max:255'],

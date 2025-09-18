@@ -6,20 +6,20 @@
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="images">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Suitcase"></i><span class="nav-text">Galeria de Imagens</span></a>
+                            <a class="nav-item-hold" href="#"><i class="i-Folder-Pictures"></i><span class="nav-text">Galeria de Imagens</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="profile">
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Checked-User"></i><span class="nav-text">Editar Perfil</span></a>
                             <div class="triangle"></div>
                         </li>
-@if (Auth::user()->rule == 'admin')
+@if (Auth::user()->rule != 'user')
                         <li class="nav-item" data-item="resource">
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Ícones</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="finance">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Money-2"></i><span class="nav-text">Finanças</span></a>
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Receipt-4"></i><span class="nav-text">Editoriais</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item">
@@ -64,8 +64,8 @@
                             <p>Adicione ou visualize suas imagens.</p>
                         </header>
                         <ul class="childNav">
-                            <li class="nav-item"><a href="{{ route('image.upload') }}"><i class="nav-icon i-Upload-Window"></i><span class="item-name">Adicionar Imagem</span></a></li>
-                            <li class="nav-item"><a href="{{ route('image.gallery') }}"><i class="nav-icon i-Folder-Pictures"></i><span class="item-name">Galeria de Imagens</span></a></li>
+                            <li class="nav-item"><a href="{{ route('image.create') }}"><i class="nav-icon i-Upload-Window"></i><span class="item-name">Adicionar Imagem</span></a></li>
+                            <li class="nav-item"><a href="{{ route('image.index') }}"><i class="nav-icon i-Folder-Pictures"></i><span class="item-name">Galeria de Imagens</span></a></li>
                         </ul>
                     </div>
                     <div class="submenu-area" data-parent="profile">
@@ -78,22 +78,15 @@
                             <li class="nav-item"><a href="{{ route('profile.delete') }}"><i class="nav-icon i-Remove-User"></i><span class="item-name">Excluir Conta</span></a></li>
                         </ul>
                     </div>
-@if (Auth::user()->rule == 'admin')
                     <div class="submenu-area" data-parent="finance">
                         <header>
-                            <h6>Finanças</h6>
+                            <h6>Editoriais</h6>
                         </header>
                         <ul class="childNav">
-                            <li class="nav-item"><a href="form.basic.html"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Basic Elements</span></a></li>
-                            <li class="nav-item"><a href="form.layouts.html"><i class="nav-icon i-Split-Vertical"></i><span class="item-name">Form Layouts</span></a></li>
-                            <li class="nav-item"><a href="form.input.group.html"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Input Groups</span></a></li>
-                            <li class="nav-item"><a href="form.validation.html"><i class="nav-icon i-Close-Window"></i><span class="item-name">Form Validation</span></a></li>
-                            <li class="nav-item"><a href="smart.wizard.html"><i class="nav-icon i-Width-Window"></i><span class="item-name">Smart Wizard</span></a></li>
-                            <li class="nav-item"><a href="tag.input.html"><i class="nav-icon i-Tag-2"></i><span class="item-name">Tag Input</span></a></li>
-                            <li class="nav-item"><a href="editor.html"><i class="nav-icon i-Pen-2"></i><span class="item-name">Rich Editor</span></a></li>
+                            <li class="nav-item"><a href="{{ route('editorial.index') }}"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Editoriais</span></a></li>
+                            <li class="nav-item"><a href="{{ route('editorial.create') }}"><i class="nav-icon i-Pen-2"></i><span class="item-name">Novo Editorial</span></a></li>
                         </ul>
                     </div>
-@endif
                     <div class="submenu-area" data-parent="resource">
                         <header>
                             <h6>Ícones</h6>
@@ -101,12 +94,9 @@
                         </header>
                         <ul class="childNav">
                             <li class="nav-item"><a href="{{ route('resource.index') }}"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Ícones</span></a></li>
-@if (Auth::user()->rule == 'admin')
                             <li class="nav-item"><a href="{{ route('resource.create') }}"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Adicionar Ícone</span></a></li>
-@endif
                         </ul>
                     </div>
-@if (Auth::user()->rule == 'admin')
                     <div class="submenu-area" data-parent="sessions">
                         <header>
                             <h6>Session Pages</h6>
@@ -129,6 +119,5 @@
                             <li class="nav-item"><a href="blank.html"><i class="nav-icon i-File-Horizontal"></i><span class="item-name">Blank Page</span></a></li>
                         </ul>
                     </div>
-@endif
                 </div>
             </div>

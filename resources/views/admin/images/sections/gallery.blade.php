@@ -14,11 +14,15 @@
                                                 </div>
                                             </a>
                                             <button class="btn btn-corp-b text-center rounded mt-3" onclick="copiarLinkImagem('imagePath{{ $image->id }}')"><i class="fa fa-copy"></i> Copiar endereço da Imagem</button>
+                                            <button type="button" class="btn btn-corp-b text-center rounded mt-3" data-bs-toggle="modal" data-bs-target="#deleteImage{{ $image->id }}"><i class="fa fa-trash"></i> Excluir Imagem</button>
                                         </div>
 @endforeach
                                         {{ $images->appends(request()->query())->links() }}
                                     </div>
                                 </div>
+@foreach ($images as $image)
+                                @include('admin.images.sections.modalDeleteImage')
+@endforeach
 @section('script')
         <script>
             function copiarLinkImagem(imageId) {
