@@ -2,34 +2,34 @@
                 <div class="container-fluid">
                     <div class="devices-wrapper">
                         <div class="macbook-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/BGHome.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/BGHome.jpg') }}" alt="LEague Hall"/>
                         </div>
                         <div class="ipad--l-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.8" src="{{ asset('images/web/banner/ValkyrieWayne.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.8" src="{{ asset('images/web/banner/ValkyrieWayne.jpg') }}" alt="Valkyrie Wayne"/>
                         </div>
                         <div class="iphone-1" data-zanim-xs='{"delay":0.4,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{{ asset('images/web/banner/TidesOfWarHero.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{{ asset('images/web/banner/TidesOfWarHero.jpg') }}" alt="Tides Of War"/>
                         </div>
                         <div class="ipad--l-2" data-zanim-xs='{"delay":0.3,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.4" src="{{ asset('images/web/banner/MissFireCrystal.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.4" src="{{ asset('images/web/banner/MissFireCrystal.jpg') }}" alt="Miss FireCrystal"/>
                         </div>
                         <div class="iphone-2" data-zanim-xs='{"delay":0.2,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4" src="{{ asset('images/web/banner/Companies.png') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4" src="{{ asset('images/web/banner/Companies.png') }}" alt="Companies"/>
                         </div>
                         <div class="macbook-2" data-zanim-xs='{"delay":0.4,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="5" src="{{ asset('images/web/banner/LeagueHall.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="5" src="{{ asset('images/web/banner/LeagueHall.jpg') }}" alt="League Hall"/>
                         </div>
                         <div class="ipad--l-3" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.7" src="{{ asset('images/web/banner/SonsOfTrigon.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3.7" src="{{ asset('images/web/banner/SonsOfTrigon.jpg') }}" alt="Sons Of Trigon"/>
                         </div>
                         <div class="ipad--p-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{{ asset('images/web/banner/BirdsOfPrey.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{{ asset('images/web/banner/BirdsOfPrey.jpg') }}" alt="Birds Of Prey"/>
                         </div>
                         <div class="iphone-3" data-zanim-xs='{"delay":0.3,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/Event.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/Event.jpg') }}" alt="Event"/>
                         </div>
                         <div class="iphone-4" data-zanim-xs='{"delay":0.2,"animation":"slide-left","duration":1.5}'>
-                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/ProfessoraBlue.jpg') }}" alt=""/>
+                            <img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{{ asset('images/web/banner/ProfessoraBlue.jpg') }}" alt="Professora Blue"/>
                         </div>
                         <div class="iphone--l-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'>
                             <img class="device" data-parallax="data-parallax" data-rellax-speed="2" src="{{ asset('images/web/banner/HomeMFC.jpg') }}" alt=""/>

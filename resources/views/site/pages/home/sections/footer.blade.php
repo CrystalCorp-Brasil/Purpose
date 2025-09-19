@@ -1,6 +1,6 @@
-            <section class="py-8" id="LandingPremium">
+            <section class="py-5" id="footer">
                 <div class="bg-holder overlay overlay-0" style="background-image:url({{ asset('images/web/dcuo/site-005.jpg') }});"></div>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row flex-center">
                         <div class="col-lg-6 pl-5"><h1 class="fw-black mb-0 text-orange pl-5">DC Universe<span class="fw-light"> Online</span></h1></div>
                         <div class="col-lg-6 mt-4 mt-lg-0">

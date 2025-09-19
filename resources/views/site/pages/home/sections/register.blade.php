@@ -1,4 +1,4 @@
-            <section class="bg-black-russian py-0" id="LandingHeader">
+            <section class="bg-black-russian py-0" id="Register">
                 <div class="container-fluid">
                     <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="col-lg-6 py-0 position-relative">
@@ -13,7 +13,7 @@
                                         <h2 class="fw-light text-uppercase display-4 font-secondary text-orange" data-zanim-lg='{"delay":0.4}'>Registre-se<br />para<span class="fw-black"> ação</span></h2>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <p class="lead font-secondary mt-4" data-zanim-lg='{"delay":0.5}'>Fique por dentro sobre todo o <br />conteúdo. Acompanhe todas os<br />lançamentos e novidades.</p>
+                                        <p class="lead font-secondary mt-4" data-zanim-lg='{"delay":0.5}'>Fique por dentro sobre todo o <br/>conteúdo. Acompanhe todas os<br/>lançamentos e novidades.</p>
                                     </div>
                                     <div class="overflow-hidden">
                                         <div class="mt-3 mt-lg-5" data-zanim-xs='{"delay":0.6}'>

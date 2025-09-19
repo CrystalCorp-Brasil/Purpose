@@ -1,7 +1,7 @@
-            <section class="overflow-hidden bg-black-russian my-5" id="landing-features-1">
-                <div class="container">
+            <section class="overflow-hidden py-5" id="parallax">
+                <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="col-md-7">
+                        <div class="col-md-12">
                             <div class="row bg-body rounded py-7 py-xl-9 px-5 px-md-0 font-secondary">
                                 <div class="col-md-9 col-lg-6 offset-md-1 offset-lg-2" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                     <div class="overflow-hidden">

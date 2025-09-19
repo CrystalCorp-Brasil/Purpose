@@ -1,4 +1,4 @@
-            <section class="bg-black-russian" id="LandingFeatures">
+            <section class="text-center" id="Featurings">
                 <div class="container-fluid">
                     <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="col-lg-6 col-xl-3 mt-3 mt-xl-0 pe-lg-2" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}'>

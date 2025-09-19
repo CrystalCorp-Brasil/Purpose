@@ -1,5 +1,5 @@
-            <section class="py-8" id="LandingDownload">
-                <div class="container">
+            <section class="bg-black-russian py-8" id="signUpDB">
+                <div class="container-fluid">
                     <div class="row flex-center">
                         <div class="col-md-7 text-center">
                             <h2 class="text-body-tertiary fw-light">Inicie<span class="fw-black"> agora mesmo</span> sua aventura!</h2>

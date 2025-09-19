@@ -1,6 +1,6 @@
 <?php
-    require __DIR__.'/admin/editorial.php';
-    require __DIR__.'/admin/icon.php';
-    require __DIR__.'/admin/profile.php';
-    require __DIR__.'/auth/auth.php';
-    require __DIR__.'/site/site.php';
+    use Illuminate\Support\Facades\File;
+
+    foreach(File::allFiles(__DIR__.'/*') as $route_file){
+        require $route_file->getPathname();
+    }
