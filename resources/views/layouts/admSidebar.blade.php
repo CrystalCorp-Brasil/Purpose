@@ -6,7 +6,7 @@
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="images">
-                            <a class="nav-item-hold" href="#"><i class="i-Folder-Pictures"></i><span class="nav-text">Galeria de Imagens</span></a>
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Folder-Pictures"></i><span class="nav-text">Galeria de Imagens</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="profile">
@@ -18,16 +18,12 @@
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Ícones</span></a>
                             <div class="triangle"></div>
                         </li>
-                        <li class="nav-item" data-item="finance">
+                        <li class="nav-item" data-item="editorial">
                             <a class="nav-item-hold" href="#"><i class="nav-icon i-Receipt-4"></i><span class="nav-text">Editoriais</span></a>
                             <div class="triangle"></div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-item-hold" href="datatables.html"><i class="nav-icon i-File-Horizontal-Text"></i><span class="nav-text">Datatables</span></a>
-                            <div class="triangle"></div>
-                        </li>
-                        <li class="nav-item" data-item="sessions">
-                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Administrator"></i><span class="nav-text">Sessions</span></a>
+                        <li class="nav-item" data-item="projects">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon fad fa-project-diagram"></i><span class="nav-text">Projetos</span></a>
                             <div class="triangle"></div>
                         </li>
                         <li class="nav-item" data-item="others">
@@ -43,7 +39,7 @@
                 </div>
                 <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
                     <i class="sidebar-close i-Close" (click)="toggelSidebar()"></i>
-                    <header>
+                    <header class="mb-5">
                         <a href="{{ route('dashboard') }}">
                             @include('layouts.admLogo')
                         </a>
@@ -78,9 +74,10 @@
                             <li class="nav-item"><a href="{{ route('profile.delete') }}"><i class="nav-icon i-Remove-User"></i><span class="item-name">Excluir Conta</span></a></li>
                         </ul>
                     </div>
-                    <div class="submenu-area" data-parent="finance">
+                    <div class="submenu-area" data-parent="editorial">
                         <header>
                             <h6>Editoriais</h6>
+                            <p>Atualize, edite ou exclua seus posts.</p>
                         </header>
                         <ul class="childNav">
                             <li class="nav-item"><a href="{{ route('editorial.index') }}"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Editoriais</span></a></li>
@@ -90,22 +87,21 @@
                     <div class="submenu-area" data-parent="resource">
                         <header>
                             <h6>Ícones</h6>
-                            <p>Bem vindo, {{ Auth::user()->name }}.</p>
+                            <p>Consulte os ícones disponíveis..</p>
                         </header>
                         <ul class="childNav">
                             <li class="nav-item"><a href="{{ route('resource.index') }}"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Ícones</span></a></li>
                             <li class="nav-item"><a href="{{ route('resource.create') }}"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Adicionar Ícone</span></a></li>
                         </ul>
                     </div>
-                    <div class="submenu-area" data-parent="sessions">
+                    <div class="submenu-area" data-parent="projects">
                         <header>
-                            <h6>Session Pages</h6>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <h6>Projetos</h6>
+                            <p>Atualize, edite ou exclua seus posts.</p>
                         </header>
                         <ul class="childNav">
-                            <li class="nav-item"><a href="../sessions/signin.html"><i class="nav-icon i-Checked-User"></i><span class="item-name">Sign in</span></a></li>
-                            <li class="nav-item"><a href="../sessions/signup.html"><i class="nav-icon i-Add-User"></i><span class="item-name">Sign up</span></a></li>
-                            <li class="nav-item"><a href="../sessions/forgot.html"><i class="nav-icon i-Find-User"></i><span class="item-name">Forgot</span></a></li>
+                            <li class="nav-item"><a href="{{ route('project.index') }}"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Projetos</span></a></li>
+                            <li class="nav-item"><a href="{{ route('project.create') }}"><i class="nav-icon i-Pen-2"></i><span class="item-name">Novo Projeto</span></a></li>
                         </ul>
                     </div>
                     <div class="submenu-area" data-parent="others">
@@ -114,7 +110,7 @@
                             <p>Lorem ipsum dolor sit.</p>
                         </header>
                         <ul class="childNav" data-parent="">
-                            <li class="nav-item"><a href="../sessions/not-found.html"><i class="nav-icon i-Error-404-Window"></i><span class="item-name">Not Found</span></a></li>
+                            <li class="nav-item"><a href="../projects/not-found.html"><i class="nav-icon i-Error-404-Window"></i><span class="item-name">Not Found</span></a></li>
                             <li class="nav-item"><a href="user.profile.html"><i class="nav-icon i-Male"></i><span class="item-name">User Profile</span></a></li>
                             <li class="nav-item"><a href="blank.html"><i class="nav-icon i-File-Horizontal"></i><span class="item-name">Blank Page</span></a></li>
                         </ul>

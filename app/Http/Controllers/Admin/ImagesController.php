@@ -21,7 +21,10 @@
             return \view('admin/images/gallery', compact('images','user','data'));
         }
 
-        public function create(){return \view('admin/images/upload');}
+        public function create(){
+            $user = Auth::user();
+            return \view('admin/images/upload', compact('user'));
+        }
 
         public function store(ImageRequest $request) {
             $request->validated();

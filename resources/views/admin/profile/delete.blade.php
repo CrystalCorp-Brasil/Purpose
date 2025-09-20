@@ -1,7 +1,8 @@
 @extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Excluir Perfil'])
 @section('title') Exclusão @endsection
 @section('content')
-                    <div class="card">
+                    <div class="card user-profile o-hidden">
+                        @include('admin.profile.sections.header')
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12 text-center">

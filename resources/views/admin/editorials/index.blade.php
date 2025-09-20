@@ -1,16 +1,9 @@
 @extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'editorial','title'=>'Editoriais'])
 @section('title') Editoriais @endsection
 @section('content')
-                    <div class="card user-profile o-hidden mb-4">
-                        <div class="header-cover" style="background-image: url('{{ asset('images/adm/crystalcorp.jpg') }}');"></div>
-                        <div class="user-info">
-                            <img class="profile-picture avatar-lg mb-2 bg-white rounded-pill" src="@if($user->image == null){{ asset('images/adm/user.png') }}@else{{ asset($user->image) }}@endif" alt="{{ $user->name }}"/>
-                            <p class="m-0 text-24">{{ $user->name }}</p>
-@if ($user->rule == 'admin')
-                            <p class="text-muted m-0 text-capitalize">{{ $user->rule }}</p>
-@endif
-                        </div>
-                        <div class="row my-5">
+                    <div class="card user-profile o-hidden">
+                        @include('admin.profile.sections.header')
+                        <div class="row">
                             <div class="col-md-12 mb-3">
                                 <div class="card text-start">
                                     <div class="card-body">

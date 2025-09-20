@@ -9,6 +9,7 @@
                 $table->id();
                 $table->string('title');
                 $table->string('class');
+                $table->string('family');
                 $table->timestamps();
             });
         }

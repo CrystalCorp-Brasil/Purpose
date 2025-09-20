@@ -5,17 +5,20 @@
     use App\Http\Requests\EditorialRequest;
     use App\Models\{Editorial,User};
     use Illuminate\Http\Request;
-    use Illuminate\Support\Facades\{Auth,Redirect, Storage};
+    use Illuminate\Support\Facades\{Auth,Redirect};
     use Illuminate\Support\Str;
 
     class EditorialController extends Controller {
         public function index() {
             $user = Auth::user();
             $posts = Editorial::all();
-            return \view ('admin.editorial.index', compact('posts','user'));
+            return \view ('admin/editorials/index', compact('posts','user'));
         }
 
-        public function create(){return \view('admin/editorial/create');}
+        public function create(){
+            $user = Auth::user();
+            return \view('admin/editorials/create', compact('user'));
+        }
 
         public function store(EditorialRequest $request) {
             $request->validated();

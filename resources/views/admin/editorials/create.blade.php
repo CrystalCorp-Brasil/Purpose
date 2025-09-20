@@ -1,13 +1,14 @@
 @extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'editorial','title'=>'Novo Editorial'])
 @section('title') Novo Editorial @endsection
 @section('content')
-                    <div class="row mb-3">
-                        <form action="{{ route('editorial.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
+                    <div class="card user-profile o-hidden">
+                        @include('admin.profile.sections.header')
+                        <div class="row mb-3">
+                            <form action="{{ route('editorial.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
 
-                            @method('PATCH')
+                                @method('PATCH')
 
-                            <div class="card">
                                 <div class="card-body">
                                     <div class="row text-center">
                                         <div class="col-md-8 offset-2">
@@ -37,8 +38,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 @endsection
 @section('script')

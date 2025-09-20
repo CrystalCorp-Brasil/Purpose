@@ -18,25 +18,28 @@
                     </div>
 @endsection
 @section('content')
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="row">
+                    <div class="card user-profile o-hidden">
+                        @include('admin.profile.sections.header')
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="row">
 @foreach ($icons as $icon)
-                                    <div class="col-md-2">
-                                        <div class="card card-icon mb-4">
-                                            <div class="card-body text-center">
-                                                <i class="{{ $icon->class }}"></i>
-                                                <p class="mt-2 mb-2"><small>{{ $icon->title }}</small></p>
-                                                <pre id="iconCode"><code>&lt;i class="{{ $icon->class }}"&gt;&lt;/i&gt;</code></pre>
-                                                <button class="btn btn-a-link-2" onclick="copyCode('iconCode')">Copiar Código</button>
-                                            </div>
+                                <div class="col-md-2">
+                                    <div class="card card-icon mb-4">
+                                        <div class="card-body text-center">
+                                            <i class="{{ $icon->class }}"></i>
+                                            <p class="mt-2 mb-2"><small>{{ $icon->title }}</small></p>
+                                            <pre id="iconCode"><code>&lt;i class="{{ $icon->class }}"&gt;&lt;/i&gt;</code></pre>
+                                            <button class="btn btn-a-link-2" onclick="copyCode('iconCode')">Copiar Código</button>
                                         </div>
                                     </div>
-@endforeach
                                 </div>
-                                {{ $icons->appends(request()->query())->links() }}
+@endforeach
                             </div>
                         </div>
+                        {{ $icons->appends(request()->query())->links() }}
+                    </div>
 @endsection
 @section('script')
         <script>

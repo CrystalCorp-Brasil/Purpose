@@ -1,13 +1,14 @@
 @extends('layouts.admLayout',['bodyClass'=>'text-start','pageActive'=>'perfil','title'=>'Editar Perfil'])
 @section('title') Edição @endsection
 @section('content')
-                    <div class="row mb-3">
-                        <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
+                    <div class="card user-profile o-hidden">
+                        @include('admin.profile.sections.header')
+                        <div class="row mb-3">
+                            <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
 
-                            @method('PATCH')
+                                @method('PATCH')
 
-                            <div class="card">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6 offset-2">
@@ -49,8 +50,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 @endsection
 @section('script')

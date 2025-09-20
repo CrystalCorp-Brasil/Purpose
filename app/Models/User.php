@@ -23,4 +23,8 @@
         public function editorials(): HasMany {
             return $this->hasMany(Editorial::class);
         }
+
+        public function projects(): HasMany {
+            return $this->hasMany(Project::class);
+        }
     }

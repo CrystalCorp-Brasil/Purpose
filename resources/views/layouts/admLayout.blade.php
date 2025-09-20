@@ -24,7 +24,9 @@
             @include('layouts.admSidebar')
             <div class="main-content-wrap d-flex flex-column p-0">
                 <div class="main-header">
-                    @include('layouts.admLogo')
+                    <a href="{{ route('home') }}">
+                        @include('layouts.admLogo')
+                    </a>
                     <div class="menu-toggle">
                         <div></div>
                         <div></div>
