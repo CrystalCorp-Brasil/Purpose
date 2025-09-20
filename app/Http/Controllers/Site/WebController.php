@@ -3,28 +3,32 @@
 
     use App\Http\Controllers\Controller;
     use App\Models\{Editorial,Image};
+    use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Request;
 
     class WebController extends Controller {
-        public function index(){
+        public function index(Request $request){
             $images = Image::with('user')->limit(2)->orderBy('created_at', 'DESC')->get();
             $posts = Editorial::with('user')->limit(4)->orderBy('created_at', 'DESC')->get();
-            return view('site.pages.home.index',compact('posts','images'));
+            return view('site/home/index',compact('posts','images'));
         }
 
-        public function termsOfUse(){return view('site.pages.termsOfUse');}
-
-        public function privacyPolicy(){return view('site.pages.privacyPolicy');}
-
-        public function editorial(){
-            $posts = Editorial::with('user')->orderBy('created_at', 'DESC')->get();
-            return view('site.pages.editorial.index', compact('posts'));
+        public function about(){
+            $pageTitle= 'Sobre Nós';
+            return view ('site/pages/about', compact('pageTitle'));
         }
 
-        public function editorialShow(Editorial $editorial){
-            return view('site.pages.editorial.show',compact('editorial'));
-        }
+        public function termsOfUse(){
+            $pageTitle = 'Termos de Uso';
+            return view('site/pages/termsOfUse',compact('pageTitle'));}
+
+        public function privacyPolicy(){
+            $pageTitle = 'Política de Privacidade';
+            return view('site/pages/privacyPolicy',compact('pageTitle'));}
+
         public function imageGallery(){
-            $images = Image::with('user')->orderBy('created_at', 'DESC')->paginate(18);
-            return view('site.pages.imageGallery', compact('images'));
+            $pageTitle = 'Galeria de Imagens';
+            $images = Image::with('user')->orderBy('created_at', 'DESC')->paginate(16);
+            return view('site/pages/imageGallery', compact('images','pageTitle'));
         }
     };

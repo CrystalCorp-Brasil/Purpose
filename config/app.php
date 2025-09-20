@@ -1,6 +1,6 @@
 <?php
     return [
-        'name' => env('APP_NAME', 'Grupo CrystalCorp'),
+        'name' => env('APP_NAME', 'CrystalCorp'),
         'env' => env('APP_ENV', 'production'),
         'debug' => (bool) env('APP_DEBUG', false),
         'url' => env('APP_URL', 'https://site.crystalcorp/'),

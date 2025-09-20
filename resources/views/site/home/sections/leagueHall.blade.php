@@ -1,4 +1,4 @@
-            <section class="text-center bg-black-russian py-5 overflow-hidden" id="leagueHall">
+            <section class="text-center bg-black-russian p-5 overflow-hidden" id="leagueHall">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col px-4">

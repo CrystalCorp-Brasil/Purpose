@@ -1,9 +1,8 @@
 @extends('layouts.webLayout')
-@section('title')Editoriais @endsection
-@section('PageTitle')Editoriais @endsection
+@section('headTitle')Editoriais @endsection
 @section('content')
-            @include('site.pages.editorial.sections.headerEditorials')
-            <section>
+            @include('layouts.webHeader')
+            <section class="mt-5 mt-lg-0 py-lg-7 p-5" id="Editorials">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-8 px-5 mb-3 mb-xl-4 mt-3 mt-xl-4">

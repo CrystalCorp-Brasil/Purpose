@@ -1,9 +1,9 @@
-            <section class="overflow-hidden py-5" id="parallax">
+            <section class="overflow-hidden p-5" id="parallax">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="row bg-body rounded py-7 py-xl-9 px-5 px-md-0 font-secondary">
-                                <div class="col-md-9 col-lg-6 offset-md-1 offset-lg-2" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                <div class="col-md-9 col-lg-4 offset-md-1" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                                     <div class="overflow-hidden">
                                         <h4 class="mb-sm-1 mb-md-2 text-orange" data-zanim-xs='{"delay":0.1}'>Duos</h4>
                                     </div>

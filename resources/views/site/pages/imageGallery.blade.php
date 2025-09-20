@@ -1,13 +1,12 @@
 @extends('layouts.webLayout')
-@section('title')Galeria de Imagens @endsection
-@section('PageTitle')Galeria de Imagens @endsection
+@section('headTitle')Galeria de Imagens @endsection
 @section('content')
-            <section class="mt-5 mt-lg-0 py-lg-7" id="page-portfolio">
-                <div class="container">
+            @include('layouts.webHeader')
+            <section class="mt-5 mt-lg-0 py-lg-7 px-5" id="Gallery">
+                <div class="container-fluid">
                     <div class="row mb-5 mb-lg-7">
                         <div class="col-lg-6">
-                            <h1 class="text-decoration-underline d-inline fs-5 fs-md-4">Galeria</h1>
-                            <p class="mt-3">Aprecie as imagens enviadas por nossos colaboradores.</p>
+                            <h2 class="d-inline">Aprecie as imagens enviadas por nossos colaboradores</h2>
                         </div>
                     </div>
                     <ul class="nav font-secondary mb-3" data-filter-nav="data-filter-nav">
@@ -23,7 +22,7 @@
                                 <img class="rounded w-100 fit-cover" src="{{ asset($image->image) }}" alt="{{ $image->title }}" data-zanim-xs='{"animation":"zoom-in","delay":0.2}'/>
                             </a>
                             <div class="col-12 mt-2">
-                                <p class="fs-9">Postado por <span class="text-info text-capitalize">{{ $image->user->username }}</span> em: {{ $image->created_at }}</p>
+                                <p class="text-center fs-9">Postado por <span class="text-info text-capitalize">{{ $image->user->username }}</span> em: {{ $image->created_at }}</p>
                             </div>
                         </div>
 @endforeach

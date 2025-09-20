@@ -1,4 +1,4 @@
-            <section class="py-5" id="footer">
+            <section class="p-5" id="footer">
                 <div class="bg-holder overlay overlay-0" style="background-image:url({{ asset('images/web/dcuo/site-005.jpg') }});"></div>
                 <div class="container-fluid">
                     <div class="row flex-center">

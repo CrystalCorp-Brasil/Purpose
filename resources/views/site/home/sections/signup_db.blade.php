@@ -1,4 +1,4 @@
-            <section class="bg-black-russian py-8" id="signUpDB">
+            <section class="bg-black-russian p-5" id="signUpDB">
                 <div class="container-fluid">
                     <div class="row flex-center">
                         <div class="col-md-7 text-center">

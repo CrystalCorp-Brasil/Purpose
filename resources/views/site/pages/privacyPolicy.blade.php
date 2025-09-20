@@ -1,19 +1,15 @@
 @extends('layouts.webLayout')
-@section('title')Política de Privacidade @endsection
-@section('style')
-        <link href="{{ asset('css/terms.css') }}" rel="stylesheet"/>
-@endsection
-@section('PageTitle')Política de Privacidade @endsection
+@section('headTitle')Política de Privacidade @endsection
 @section('content')
-            <section class="py-0 overflow-hidden bg-body">
-                <div class="container-fluid p-5">
+            @include('layouts.webHeader')
+            <section class="overflow-hidden bg-body">
+                <div class="container-fluid px-5">
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title">
-                                <h2 class="wow fadeInUp text-justify text-uppercase" data-wow-delay=".2s">Política de Privacidade</h2>
                                 <p class="wow fadeInUp mt-5 text-justify" data-wow-delay=".2s">Seja bem-vindo à CrystalCorp Brasil.</p>
-                                <p class="wow fadeInUp mt-15 text-justify" data-wow-delay=".6s">Na <span class="text-info">CrystalCorp</span>, privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos <span class="text-light">usuários</span>/<span class="text-light">clientes</span>.</p>
-                                <p class="wow fadeInUp mt-15 text-justify" data-wow-delay=".6s">Por isso, esta presente <span class="text-warning">Política de Privacidade</span> estabelece como é feita a coleta, uso e transferência de informações de <span class="text-light">clientes</span> ou outras pessoas que acessam ou usam nosso site.</p>
+                                <p class="wow fadeInUp mt-15 text-justify" data-wow-delay=".6s">Na <span class="text-info">CrystalCorp</span>, privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos <span class="text-green">usuários</span>/<span class="text-green">clientes</span>.</p>
+                                <p class="wow fadeInUp mt-15 text-justify" data-wow-delay=".6s">Por isso, esta presente <span class="text-warning">Política de Privacidade</span> estabelece como é feita a coleta, uso e transferência de informações de <span class="text-green">clientes</span> ou outras pessoas que acessam ou usam nosso site.</p>
                                 <p class="wow fadeInUp text-justify" data-wow-delay=".6s">Ao utilizar nossos serviços, você entende que coletaremos e usaremos suas informações pessoais nas formas descritas nesta <span class="text-warning">Política</span>, sob as normas da <span class="text-danger">Constituição Federal de 1988 (art. 5º, LXXIX; e o art. 22º, XXX – incluídos pela EC 115/2022)</span>, das normas de <span class="text-danger">Proteção de Dados (LGPD, Lei Federal 13.709/2018)</span>, das disposições consumeristas da <span class="text-danger">Lei Federal 8078/1990</span> e as demais normas do ordenamento jurídico brasileiro aplicáveis.</p>
                                 <p class="wow fadeInUp text-justify" data-wow-delay=".6s">Dessa forma, a <span class="text-info">NHOJunior Design</span>, doravante denominada simplesmente como “CrystalCorp”, inscrita no CNPJ/MF sob o nº <span class="text-info">21.897.767/0001-35</span>, no papel de <span class="text-warning">Controladora de Dados</span>, obriga-se ao disposto na presente <span class="text-warning">Política de Privacidade</span>.
                             </div>
@@ -56,7 +52,7 @@
                                 <div class="accordion-body">
                                     <p class="text-justify">É a partir do seu consentimento que tratamos os seus dados pessoais. O consentimento é a manifestação livre, informada e inequívoca pela qual você autoriza a <span class="text-info">CrystalCorp</span> a tratar seus dados.</p>
                                     <p class="text-justify">Assim, em consonância com a <span class="text-danger">Lei Geral de Proteção de Dados</span>, seus dados só serão coletados, tratados e armazenados mediante prévio e expresso consentimento.</p>
-                                    <p class="text-justify">O seu consentimento será obtido de forma específica para cada finalidade acima descrita, evidenciando o compromisso de transparência e boa-fé da <span class="text-info">CrystalCorp</span> para com seus <span class="text-success">usuários</span>/<span class="text-success">clientes</span>, seguindo as regulações legislativas pertinentes.</p>
+                                    <p class="text-justify">O seu consentimento será obtido de forma específica para cada finalidade acima descrita, evidenciando o compromisso de transparência e boa-fé da <span class="text-info">CrystalCorp</span> para com seus <span class="text-green">usuários</span>/<span class="text-green">clientes</span>, seguindo as regulações legislativas pertinentes.</p>
                                     <p class="text-justify">Ao utilizar os serviços da <span class="text-info">CrystalCorp</span> e fornecer seus dados pessoais, você está ciente e consentindo com as disposições desta <span class="text-warning">Política de Privacidade</span>, além de conhecer seus direitos e como exercê-los.</p>
                                     <p class="text-justify">A qualquer tempo e sem nenhum custo, você poderá revogar seu consentimento.</p>
                                     <p class="text-justify">É importante destacar que a revogação do consentimento para o tratamento dos dados pode implicar a impossibilidade da performance adequada de alguma funcionalidade do site que dependa da operação. Tais consequências serão informadas previamente.</p>
@@ -69,7 +65,7 @@
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p class="text-justify">A <span class="text-info">CrystalCorp</span> assegura a seus <span class="text-success">usuários</span>/<span class="text-success">clientes</span> seus direitos de titular previstos no <span class="text-danger">artigo 18 da Lei Geral de Proteção de Dados</span>. Dessa forma, você pode, de maneira gratuita e a qualquer tempo:</p>
+                                    <p class="text-justify">A <span class="text-info">CrystalCorp</span> assegura a seus <span class="text-green">usuários</span>/<span class="text-green">clientes</span> seus direitos de titular previstos no <span class="text-danger">artigo 18 da Lei Geral de Proteção de Dados</span>. Dessa forma, você pode, de maneira gratuita e a qualquer tempo:</p>
                                     <ul class="list-group opacity-75">
                                         <li class="list-group-item list-group-item-dark text-dark">Confirmar a existência de tratamento de dados, de maneira simplificada ou em formato claro e completo.</li>
                                         <li class="list-group-item list-group-item-dark text-dark">Acessar seus dados, podendo solicitá-los em uma cópia legível sob forma impressa ou por meio eletrônico, seguro e idôneo.</li>
@@ -131,8 +127,8 @@
                                         <li class="list-group-item list-group-item-dark text-dark">O acesso a seus dados pessoais é feito somente após o compromisso de confidencialidade</li>
                                         <li class="list-group-item list-group-item-dark text-dark">Seus dados pessoais são armazenados em ambiente seguro e idôneo.</li>
                                     </ul>
-                                    <p class="text-justify">A <span class="text-info">CrystalCorp</span> se compromete a adotar as melhores posturas para evitar incidentes de segurança. Contudo, é necessário destacar que nenhuma página virtual é inteiramente segura e livre de riscos. É possível que, apesar de todos os nossos protocolos de segurança, problemas de culpa exclusivamente de terceiros ocorram, como ataques cibernéticos de hackers, ou também em decorrência da negligência ou imprudência do próprio <span class="text-success">usuário</span>/<span class="text-success">cliente</span>.</p>
-                                    <p class="text-justify">Em caso de incidentes de segurança que possa gerar risco ou dano relevante para você ou qualquer um de nossos <span class="text-success">usuários</span>/<span class="text-success">clientes</span>, comunicaremos aos afetados e a <span class="text-danger">Autoridade Nacional de Proteção de Dados</span> sobre o ocorrido, em consonância com as disposições da <span class="text-danger">Lei Geral de Proteção de Dados</span>.</p>
+                                    <p class="text-justify">A <span class="text-info">CrystalCorp</span> se compromete a adotar as melhores posturas para evitar incidentes de segurança. Contudo, é necessário destacar que nenhuma página virtual é inteiramente segura e livre de riscos. É possível que, apesar de todos os nossos protocolos de segurança, problemas de culpa exclusivamente de terceiros ocorram, como ataques cibernéticos de hackers, ou também em decorrência da negligência ou imprudência do próprio <span class="text-green">usuário</span>/<span class="text-green">cliente</span>.</p>
+                                    <p class="text-justify">Em caso de incidentes de segurança que possa gerar risco ou dano relevante para você ou qualquer um de nossos <span class="text-green">usuários</span>/<span class="text-green">clientes</span>, comunicaremos aos afetados e a <span class="text-danger">Autoridade Nacional de Proteção de Dados</span> sobre o ocorrido, em consonância com as disposições da <span class="text-danger">Lei Geral de Proteção de Dados</span>.</p>
                                 </div>
                             </div>
                         </div>
@@ -225,11 +221,11 @@
                                 <div class="accordion-body">
                                     <p class="text-justify">Conforme mencionado no Tópico 6, embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há nenhuma página virtual inteiramente livre de riscos. Nesse sentido, a <span class="text-info">CrystalCorp</span> não se responsabiliza por:</p>
                                     <ul class="list-group opacity-75">
-                                        <li class="list-group-item list-group-item-dark text-dark">I – Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos <span class="text-success">usuários</span> em relação a seus dados individuais. Garantimos e nos responsabilizamos apenas pela segurança dos processos de tratamento de dados e do cumprimento das finalidades descritas no presente instrumento.</li>
+                                        <li class="list-group-item list-group-item-dark text-dark">I – Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos <span class="text-green">usuários</span> em relação a seus dados individuais. Garantimos e nos responsabilizamos apenas pela segurança dos processos de tratamento de dados e do cumprimento das finalidades descritas no presente instrumento.</li>
                                         <li class="list-group-item">Destacamos que a responsabilidade em relação à confidencialidade dos dados de acesso é do usuário.</li>
                                         <li class="list-group-item list-group-item-dark text-dark">II – Ações maliciosas de terceiros, como ataques de hackers, exceto se comprovada conduta culposa ou deliberada da <span class="text-info">CrystalCorp</span>.</li>
-                                        <li class="list-group-item">Destacamos que em caso de incidentes de segurança que possam gerar risco ou dano relevante para você ou qualquer um de nossos <span class="text-success">usuários</span>/<span class="text-success">clientes</span>, comunicaremos aos afetados e a <span class="text-danger">Autoridade Nacional de Proteção de Dados</span> sobre o ocorrido e cumpriremos as providências necessárias.</li>
-                                        <li class="list-group-item list-group-item-dark text-dark">III – Inveracidade das informações inseridas pelo <span class="text-success">usuário</span>/<span class="text-success">cliente</span> nos registros necessários para a utilização dos serviços da <span class="text-info">CrystalCorp</span>; quaisquer consequências decorrentes de informações falsas ou inseridas de má-fé são de inteiramente responsabilidade do <span class="text-success">usuário</span>/<span class="text-success">cliente</span>.</li>
+                                        <li class="list-group-item">Destacamos que em caso de incidentes de segurança que possam gerar risco ou dano relevante para você ou qualquer um de nossos <span class="text-green">usuários</span>/<span class="text-green">clientes</span>, comunicaremos aos afetados e a <span class="text-danger">Autoridade Nacional de Proteção de Dados</span> sobre o ocorrido e cumpriremos as providências necessárias.</li>
+                                        <li class="list-group-item list-group-item-dark text-dark">III – Inveracidade das informações inseridas pelo <span class="text-green">usuário</span>/<span class="text-green">cliente</span> nos registros necessários para a utilização dos serviços da <span class="text-info">CrystalCorp</span>; quaisquer consequências decorrentes de informações falsas ou inseridas de má-fé são de inteiramente responsabilidade do <span class="text-green">usuário</span>/<span class="text-green">cliente</span>.</li>
                                     </ul>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-            <section class="bg-black-russian py-0" id="Register">
+            <section class="bg-black-russian p-5" id="Register">
                 <div class="container-fluid">
                     <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <div class="col-lg-6 py-0 position-relative">

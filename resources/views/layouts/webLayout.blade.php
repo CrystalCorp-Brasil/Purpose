@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="{{ str_replace ('_', '-', app ()->getLocale ()) }}" dir="ltr" class="has-sidemenu">
     <head>
-        <meta charset="utf-8">
-        <title>CrystalCorp | @yield('title')</title>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="NHOJunior Design">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
         <meta name="theme-color" content="#031141">
-        <title>{{ config('app.name', 'Grupo CrystalCorp') }}</title>
+        <title>{{ config('app.name', 'CrystalCorp') }} | @yield('headTitle')</title>
         <link href="{{ asset('favicon.png') }}" rel="apple-touch-icon" sizes="180x180">
         <link href="{{ asset('favicon.png') }}" rel="icon" type="image/png" sizes="32x32">
         <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon">

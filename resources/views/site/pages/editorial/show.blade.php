@@ -1,7 +1,7 @@
 @extends('layouts.webLayout')
-@section('title')Home @endsection
+@section('headTitle'){{ $editorial->title }} @endsection
 @section('content')
-                        <section class="py-9 py-lg-10" id="page-blog" data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}' data-zanim-trigger="scroll">
+            <section class="p5-5 py-lg-10" id="Editorial" data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}' data-zanim-trigger="scroll">
                 <div class="bg-holder" style="background-image:url({{ asset($editorial->cover) }});"></div>
                 <div class="container">
                     <div class="row align-items-center">
@@ -16,18 +16,15 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="container">
+            <section class="p-5 mt-lg-0 py-lg-7 mx-5">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col font-secondary text-body-tertiary">{{ $editorial->created_at->format('d/m/Y H:m') }}</div>
-                                        <div class="col ms-auto font-secondary text-end">
-                                            <a class="me-3 text-body-tertiary" href="#!"><span class="fas fa-heart me-1 text-danger"></span>14</a>
-                                            <a class="text-body-tertiary" href="#!"><span class="far fa-comment me-1"></span>12</a>
-                                        </div>
+                                        <div class="col ms-auto font-secondary text-end">Visualizações: <span class="me-1 text-green">{{ $editorial->visits }}</span></div>
                                     </div>
                                     <h3 class="mt-4">{{ $editorial->title }}</h3>
                                     <div class="mt-4 text-justify">{!! $editorial->publish !!}</div>
